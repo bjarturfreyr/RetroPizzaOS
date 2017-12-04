@@ -7,5 +7,6 @@ int main() {
     //Kallar í MainMenuController.cpp
     MainMenuController mmc;
 
+    // test 
     return 0;
 }
