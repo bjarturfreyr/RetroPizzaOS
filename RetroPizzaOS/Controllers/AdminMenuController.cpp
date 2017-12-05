@@ -9,18 +9,24 @@ AdminMenuController::AdminMenuController()
 
 void AdminMenuController::init(){
     displayAdminMenu();
+    int verd;
+    int aleggID;
+    string nafn;
 
     while(true){
+        //clearScreen();
         displayAdminNavigation();
 
         char input;
         cin >> input;
 
         if(input == 'b'){
-            cout << "adding a pitsa" << endl;
+            cin >> nafn;
+            cin >> aleggID;
+            addPizza(nafn, aleggID);
         }
         else if(input == 'l'){
-            cout << "viewing pitsas" << endl;
+            displayAdminPizzaList();
         }
         else if(input == 't'){
             MainMenuController mmc;

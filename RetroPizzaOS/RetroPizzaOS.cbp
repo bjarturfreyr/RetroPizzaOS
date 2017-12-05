@@ -58,6 +58,8 @@
 		<Unit filename="Views/AdminMenuView.h" />
 		<Unit filename="Views/MainMenuView.cpp" />
 		<Unit filename="Views/MainMenuView.h" />
+		<Unit filename="Views/SalesMenuView.cpp" />
+		<Unit filename="Views/SalesMenuView.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

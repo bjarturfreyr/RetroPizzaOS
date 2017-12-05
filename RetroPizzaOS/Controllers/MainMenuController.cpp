@@ -33,8 +33,7 @@ void MainMenuController::init(){
     }
 
     else if (selection == 's'){
-        //SalaUI = salaUI;  BÚA TIL KLASA
-        //salaUI.startuUI();
+        SalesMenuController smc;
     }
 
     else {
