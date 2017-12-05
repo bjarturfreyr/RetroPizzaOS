@@ -11,6 +11,8 @@ using namespace std;
 namespace SalesMenuView{
     void displaySalesMenu();
     void displaySalesNavigation();
+    void displaySalesPizzalist();
+    void displaySalesOffer();
 }
 
 #endif // SALESMENUVIEW_H

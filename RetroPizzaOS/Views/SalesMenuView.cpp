@@ -19,3 +19,8 @@ void SalesMenuView::displaySalesPizzalist()
     cout << "Veldu pizzu" << endl;
     cout << listPizzas() << endl;
 }
+
+void SalesMenuView::displaySalesOffer()
+{
+    cout << "Hvada pizzu ma bjoda ther" << endl;
+}
