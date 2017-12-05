@@ -3,7 +3,7 @@
 string Database::listPizzas() {
     string pizzalist;
     string line;
-    ifstream myfile ("pizzas.txt");
+    ifstream myfile ("menu.txt");
     if (myfile.is_open())
     {
         while (getline (myfile,line))
@@ -18,8 +18,8 @@ string Database::listPizzas() {
 
 void Database::addPizza(string nafn, int aleggID) {
     ofstream myfile;
-    myfile.open ("pizzas.txt", ios::app);
-    myfile << nafn << endl << aleggID;
+    myfile.open ("menu.txt", ios::app);
+    myfile << endl << nafn << endl << aleggID;
     myfile.close();
 }
 
