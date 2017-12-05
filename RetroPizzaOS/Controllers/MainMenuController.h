@@ -4,6 +4,7 @@
 #include <iostream>
 #include "MainMenuView.h"
 #include "GlobalHelpers.h"
+#include "AdminMenuController.h"
 
 using namespace MainMenuView;
 using namespace GlobalHelpers;

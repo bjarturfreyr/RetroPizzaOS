@@ -14,13 +14,18 @@ MainMenuController::~MainMenuController()
 void MainMenuController::init(){
 
     char selection = '\0';
+<<<<<<< Updated upstream
     while (selection != 'h'){
+=======
+    //while (selection != 'q'){
+>>>>>>> Stashed changes
 
-        clearScreen();
+        //clearScreen();
         displayMenuNavigation(); //Kallar í MainMenuView
 
         cin >> selection; //Controllerin sem við erum í sér um að taka inn input.
 
+<<<<<<< Updated upstream
     }
 
     if (selection == 'a'){
@@ -40,4 +45,23 @@ void MainMenuController::init(){
     else {
         //try again
     }
+=======
+        if (selection == 'a'){
+            AdminMenuController amc;
+
+        }
+        else if (selection == 'b'){
+//         BakariUI = bakariUI; BÚA TIL KLASA
+//         bakariUI.startuUI();
+    }
+        else if (selection == 's'){
+ //        SalaUI = salaUI;  BÚA TIL KLASA
+//         salaUI.startuUI();
+        }
+
+        else {
+            //try again
+        }
+   // }
+>>>>>>> Stashed changes
 }

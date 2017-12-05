@@ -13,6 +13,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="Controllers" />
+					<Add directory="Models" />
+					<Add directory="Views" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +25,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="Controllers" />
+					<Add directory="Models" />
+					<Add directory="Views" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -31,7 +37,23 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="Controllers" />
+			<Add directory="Views" />
+			<Add directory="Helpers" />
+			<Add directory="Models" />
 		</Compiler>
+		<Unit filename="Controllers/AdminMenuController.cpp" />
+		<Unit filename="Controllers/AdminMenuController.h" />
+		<Unit filename="Controllers/MainMenuController.cpp" />
+		<Unit filename="Controllers/MainMenuController.h" />
+		<Unit filename="Helpers/GlobalHelpers.cpp" />
+		<Unit filename="Helpers/GlobalHelpers.h" />
+		<Unit filename="Models/Pizza.cpp" />
+		<Unit filename="Models/Pizza.h" />
+		<Unit filename="Views/AdminMenuView.cpp" />
+		<Unit filename="Views/AdminMenuView.h" />
+		<Unit filename="Views/MainMenuView.cpp" />
+		<Unit filename="Views/MainMenuView.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

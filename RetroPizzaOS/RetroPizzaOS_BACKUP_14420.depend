@@ -21,22 +21,17 @@
 	"MainMenuView.h"
 	"GlobalHelpers.h"
 
-1512482245 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.h
+1512395465 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.h
 	<iostream>
-	"GlobalHelpers.h"
 
-1512479926 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.cpp
+1512395592 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.cpp
 	"MainMenuController.h"
 
-1512483802 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.cpp
+1512479176 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.cpp
 	"MainMenuView.h"
 
-1512482320 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\helpers\globalhelpers.h
+1512479582 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\helpers\globalhelpers.h
 	<stdlib.h>
-	<windows.h>
-
-1512482347 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\helpers\globalhelpers.cpp
-	"GlobalHelpers.h"
 
 1512479582 
 
