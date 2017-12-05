@@ -16,16 +16,17 @@
 	<iostream>
 	"MainMenuController.h"
 
-1512479926 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.h
+1512486374 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.h
 	<iostream>
 	"MainMenuView.h"
 	"GlobalHelpers.h"
+	"AdminMenuController.h"
 
 1512482245 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.h
 	<iostream>
 	"GlobalHelpers.h"
 
-1512479926 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.cpp
+1512486374 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.cpp
 	"MainMenuController.h"
 
 1512483802 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.cpp
@@ -90,4 +91,20 @@
 
 1512485026 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.cpp
 	"AdminMenuView.h"
+
+1512486374 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.cpp
+	"AdminMenuController.h"
+	"AdminMenuView.h"
+
+1512486374 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.h
+	"AdminMenuView.h"
+	"Pizza.h"
+	"MainMenuController.h"
+
+1512486374 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.h
+	<iostream>
+
+1512486374 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\models\pizza.h
+	<string>
+	<iostream>
 
