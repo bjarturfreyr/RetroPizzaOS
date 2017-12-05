@@ -2,8 +2,10 @@
 #define MAINMENUVIEW_H
 
 #include <iostream>
+#include "GlobalHelpers.h"
 
 using namespace std;
+using namespace GlobalHelpers;
 
 namespace MainMenuView
 {
