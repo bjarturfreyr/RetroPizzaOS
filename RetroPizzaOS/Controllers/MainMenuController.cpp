@@ -16,6 +16,7 @@ void MainMenuController::init(){
     char selection = '\0';
     while (selection != 'q'){
 
+        clearScreen();
         displayMenuNavigation(); //Kallar í MainMenuView
         cin >> selection; //Controllerin sem við erum í sér um að taka inn input.
 

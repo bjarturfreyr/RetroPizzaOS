@@ -3,8 +3,10 @@
 
 #include <iostream>
 #include "MainMenuView.h"
+#include "GlobalHelpers.h"
 
 using namespace MainMenuView;
+using namespace GlobalHelpers;
 
 using namespace std;
 

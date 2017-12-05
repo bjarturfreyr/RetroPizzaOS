@@ -3,8 +3,8 @@
 void MainMenuView::displayMenuNavigation()
 {
     //View file-ar sjá bara um að cout-a þegar kallað er í þá.
-    cout << "q: quit" << endl;
-    cout << "a: admin" << endl;
-    cout << "b: bakari" << endl;
-    cout << "s: solumadur" << endl;
+    cout << "Press 'a' for Admin." << endl;
+    cout << "Press 'b' for Baker." << endl;
+    cout << "Press 's' for Salesman." << endl;
+    cout << "Press 'q' to quit." << endl;
 }
