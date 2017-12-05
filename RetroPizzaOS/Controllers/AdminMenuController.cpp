@@ -22,6 +22,9 @@ void AdminMenuController::init(){
         else if(input == 'l'){
             cout << "viewing pitsas" << endl;
         }
+        else if(input == 't'){
+            MainMenuController mmc;
+        }
         else{
             cout << "invalid input" << endl;
         }
