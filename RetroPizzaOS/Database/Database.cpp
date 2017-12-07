@@ -46,3 +46,10 @@ string Database::listAfhendingarstadir() {
 
     return listinn;
 }
+
+void Database::addSize(string staerd) {
+    ofstream myfile;
+    myfile.open ("staerdir.txt", ios::app);
+    myfile << endl << staerd;
+    myfile.close();
+}

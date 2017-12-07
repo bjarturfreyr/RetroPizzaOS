@@ -7,9 +7,11 @@
 #include "GlobalHelpers.h"
 #include "GlobalView.h"
 #include "conio.h"
+#include "Database.h"
 
 using namespace AdminMenuView;
 using namespace GlobalView;
+using namespace Database;
 
 class AdminMenuController
 {

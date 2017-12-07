@@ -6,8 +6,6 @@ AdminMenuController::AdminMenuController()
 }
 
 void AdminMenuController::init(){
-    int aleggID;
-    string nafn;
     char input;
 
     while(input != 'h'){
@@ -18,9 +16,9 @@ void AdminMenuController::init(){
         cin >> input;
 
         if(input == 'b'){
-            cin >> nafn;
-            cin >> aleggID;
-            addPizza(nafn, aleggID);
+            string staerd;
+            cin >> staerd;
+            addSize(staerd);
         }
 
         else if(input == 'l'){
