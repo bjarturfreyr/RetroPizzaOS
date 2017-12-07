@@ -31,11 +31,4 @@ void Database::addAlegg(string nafn, int verd) {
     myfile.close();
 }
 
-void Database::getMenu(){
-    ofstream fout;
-        fout.open("menu.txt", ios::app);
-        if (fout.is_open()){
-            fout << pizza;
-            fout.close();
-        }
-}
+
