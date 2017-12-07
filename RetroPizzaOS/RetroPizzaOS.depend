@@ -16,8 +16,7 @@
 	<iostream>
 	"MainMenuController.h"
 
-1512650701 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.h
-	<iostream>
+1512652228 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.h
 	"MainMenuView.h"
 	"GlobalHelpers.h"
 	"AdminMenuController.h"
@@ -28,10 +27,10 @@
 	<iostream>
 	"GlobalHelpers.h"
 
-1512649615 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.cpp
+1512658020 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.cpp
 	"MainMenuController.h"
 
-1512650125 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.cpp
+1512657928 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.cpp
 	"MainMenuView.h"
 
 1512482320 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\helpers\globalhelpers.h
@@ -100,20 +99,21 @@
 1512651333 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.cpp
 	"AdminMenuView.h"
 
-1512650797 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.cpp
+1512655060 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.cpp
 	"AdminMenuController.h"
-	"AdminMenuView.h"
 
-1512650701 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.h
+1512653280 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.h
 	"AdminMenuView.h"
 	"Pizza.h"
 	"MainMenuController.h"
 	"GlobalHelpers.h"
 	"GlobalView.h"
+	"conio.h"
 
-1512650769 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.h
+1512653657 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.h
 	<iostream>
 	"Database.h"
+	"GlobalHelpers.h"
 
 1512486374 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\models\pizza.h
 	<string>
@@ -122,7 +122,7 @@
 1512486374 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\models\pizza.cpp
 	"Pizza.h"
 
-1512650769 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.cpp
+1512653914 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.cpp
 	"AdminMenuView.h"
 
 1512651333 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\database\database.h
@@ -155,7 +155,7 @@
 	<string>
 	<fstream>
 
-1512650701 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\salesmenucontroller.h
+1512656758 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\salesmenucontroller.h
 	"SalesMenuView.h"
 	"AdminMenuView.h"
 	"SalesMenuView.h"
@@ -164,23 +164,24 @@
 	"GlobalHelpers.h"
 	"GlobalView.h"
 
-1512649615 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\salesmenuview.h
+1512657381 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\salesmenuview.h
 	<iostream>
 	"Database.h"
+	"GlobalHelpers.h"
 
-1512649051 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\database\database.cpp
+1512654429 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\database\database.cpp
 	"Database.h"
 
-1512649051 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\salesmenuview.cpp
+1512657539 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\salesmenuview.cpp
 	"SalesMenuView.h"
 
-1512649615 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\salesmenucontroller.cpp
+1512657467 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\salesmenucontroller.cpp
 	"SalesMenuController.h"
 
-1512650586 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\globalview.h
+1512652163 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\globalview.h
 	<iostream>
 
-1512650586 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\globalview.cpp
+1512651659 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\globalview.cpp
 	"GlobalView.h"
 
 1512651333 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\views\globalview.h

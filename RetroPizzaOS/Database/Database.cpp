@@ -46,5 +46,3 @@ string Database::listAfhendingarstadir() {
 
     return listinn;
 }
-
-

@@ -7,23 +7,32 @@ SalesMenuController::SalesMenuController()
 
 void SalesMenuController::init()
 {
-    displaySalesMenu();
-    char size;
-    char type;
+    char selection = '\0';
+    //char size;
+    //char type;
 
-        while(true){
+    while(selection != 'h' && selection != 't' && selection != 's' && selection != 'b'){
+        clearScreen();
+        displaySalesWelcome();
         displaySalesNavigation();
-        cin >> size;
-        velja_size(size);
 
+        cin >> selection;
+    }
 
-        displaySalesOffer();
+    if (selection == 's') {
+        //skra nyja pontun
+    }
 
-        listPizzas();
+    else if (selection == 't') {
+        MainMenuController mmc;
+    }
 
+    else if (selection == 'b') {
+        //breyta pontun
+    }
 
-        cin >> type;
-        velja_pizzu(type);
+    else {
+        //bye
     }
 }
 

@@ -1,6 +1,4 @@
 #include "AdminMenuController.h"
-#include "AdminMenuView.h"
-
 
 AdminMenuController::AdminMenuController()
 {
@@ -10,13 +8,13 @@ AdminMenuController::AdminMenuController()
 void AdminMenuController::init(){
     int aleggID;
     string nafn;
+    char input;
 
-    while(true){
+    while(input != 'h'){
         clearScreen();
         displayAdminWelcome();
         displayAdminNavigation();
 
-        char input;
         cin >> input;
 
         if(input == 'b'){
@@ -24,16 +22,20 @@ void AdminMenuController::init(){
             cin >> aleggID;
             addPizza(nafn, aleggID);
         }
+
         else if(input == 'l'){
+            clearScreen();
             displayAdminPizzaList();
+            getch(); //Press any key to continue..
         }
+
         else if(input == 't'){
             MainMenuController mmc;
         }
-        else{
-            cout << "invalid input" << endl;
-        }
 
+        else {
+            //bye
+        }
     }
 }
 

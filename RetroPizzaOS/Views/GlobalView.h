@@ -1,12 +1,13 @@
-#ifndef ADMINMENUVIEW_H
-#define ADMINMENUVIEW_H
+#ifndef GLOBALVIEW_H
+#define GLOBALVIEW_H
 
 #include <iostream>
 
 using namespace std;
 
-namespace GlobalView{
+namespace GlobalView {
     void displayHeader();
-}
+    void tryAgain();
+};
 
-#endif // ADMINMENUVIEW_H
+#endif // GLOBALVIEW_H

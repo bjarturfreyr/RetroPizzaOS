@@ -1,7 +1,6 @@
 #ifndef MAINMENUCONTROLLER_H
 #define MAINMENUCONTROLLER_H
 
-#include <iostream>
 #include "MainMenuView.h"
 #include "GlobalHelpers.h"
 #include "AdminMenuController.h"
@@ -11,6 +10,7 @@
 
 using namespace MainMenuView;
 using namespace GlobalHelpers;
+using namespace GlobalView;
 
 using namespace std;
 

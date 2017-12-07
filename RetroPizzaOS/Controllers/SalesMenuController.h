@@ -17,9 +17,9 @@ class SalesMenuController
 {
     public:
         SalesMenuController();
-        void init();
 
     private:
+        void init();
 };
 
 #endif // SALESMENUCONTROLLER_H

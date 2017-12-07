@@ -3,8 +3,10 @@
 
 #include <iostream>
 #include "Database.h"
+#include "GlobalHelpers.h"
 
 using namespace Database;
+using namespace GlobalHelpers;
 
 using namespace std;
 
