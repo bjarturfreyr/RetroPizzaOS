@@ -9,7 +9,7 @@ using namespace Database;
 using namespace std;
 
 namespace AdminMenuView{
-    void displayAdminMenu();
+    void displayAdminWelcome();
     void displayAdminNavigation();
     void displayAdminPizzaList();
 }

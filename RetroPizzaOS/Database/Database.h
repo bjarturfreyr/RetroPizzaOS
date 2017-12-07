@@ -10,6 +10,7 @@ namespace Database {
     string listPizzas();
     void addPizza(string nafn, int aleggID);
     void addAlegg(string nafn, int verd);
+    string listAfhendingarstadir();
 };
 
 #endif // DATABASE_H

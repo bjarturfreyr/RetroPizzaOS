@@ -8,13 +8,13 @@ AdminMenuController::AdminMenuController()
 }
 
 void AdminMenuController::init(){
-    displayAdminMenu();
     int verd;
     int aleggID;
     string nafn;
 
     while(true){
-        //clearScreen();
+        clearScreen();
+        displayAdminWelcome();
         displayAdminNavigation();
 
         char input;

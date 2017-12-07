@@ -31,4 +31,20 @@ void Database::addAlegg(string nafn, int verd) {
     myfile.close();
 }
 
+string Database::listAfhendingarstadir() {
+    string listinn;
+    string line;
+    ifstream myfile ("afhendingarstadir.txt");
+    if (myfile.is_open())
+    {
+        while (getline (myfile,line))
+        {
+            listinn = listinn + line + "\n";
+        }
+        myfile.close();
+    }
+
+    return listinn;
+}
+
 

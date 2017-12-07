@@ -1,6 +1,6 @@
 #include "AdminMenuView.h"
 
-void AdminMenuView::displayAdminMenu(){
+void AdminMenuView::displayAdminWelcome(){
     cout << "Saelir herra admin" << endl;
 }
 

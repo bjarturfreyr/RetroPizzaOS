@@ -5,7 +5,7 @@
 #include "Pizza.h"
 #include "MainMenuController.h"
 #include "GlobalHelpers.h"
-
+#include "GlobalView.h"
 
 using namespace AdminMenuView;
 

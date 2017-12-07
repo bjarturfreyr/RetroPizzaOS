@@ -6,6 +6,7 @@
 #include "GlobalHelpers.h"
 #include "AdminMenuController.h"
 #include "SalesMenuController.h"
+#include "GlobalView.h"
 
 using namespace MainMenuView;
 using namespace GlobalHelpers;
