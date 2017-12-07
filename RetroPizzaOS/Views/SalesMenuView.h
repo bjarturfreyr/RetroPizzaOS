@@ -13,6 +13,11 @@ namespace SalesMenuView{
     void displaySalesNavigation();
     void displaySalesPizzalist();
     void displaySalesOffer();
+
+    void velja_size(char size);
+    void velja_pizzu(int type);
+
+
 }
 
 #endif // SALESMENUVIEW_H

@@ -1,6 +1,8 @@
 #ifndef SALESMENUCONTROLLER_H
 #define SALESMENUCONTROLLER_H
 
+#include "SalesMenuView.h"
+
 #include "AdminMenuView.h"
 #include "SalesMenuView.h"
 

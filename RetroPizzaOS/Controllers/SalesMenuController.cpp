@@ -1,5 +1,4 @@
 #include "SalesMenuController.h"
-#include "SalesMenuView.h"
 
 SalesMenuController::SalesMenuController()
 {

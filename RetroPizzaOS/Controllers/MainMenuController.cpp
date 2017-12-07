@@ -33,7 +33,7 @@ void MainMenuController::init(){
     }
 
     else if (selection == 's'){
-        //SalesMenuController smc;
+        SalesMenuController smc;
     }
 
     else {
