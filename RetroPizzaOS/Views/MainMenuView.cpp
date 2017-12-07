@@ -4,12 +4,33 @@ void MainMenuView::displayMenuNavigation()
 {
     //View file-ar sjá bara um að cout-a þegar kallað er í þá.
 
-    setColor(9);
-    cout << "Smelltu a 'a' fyrir Admin." << endl;
+    //15 er hvítt
+
+    setColor(15);
+    cout << "Veldu '";
+    setColor(12);
+    cout << "a";
+    setColor(15);
+    cout << "' fyrir Admin." << endl;
+
+
+    cout << "Veldu '";
+    setColor(14);
+    cout << "b";
+    setColor(15);
+    cout << "' fyrir Bakara." << endl;
+
+
+    cout << "Veldu '";
     setColor(11);
-    cout << "Smelltu a 'b' fyrir Bakara." << endl;
-    setColor(10);
-    cout << "Smelltu a 's' fyrir Solumann" << endl;
+    cout << "s";
+    setColor(15);
+    cout << "' fyrir Solumann" << endl;
+
+
+    cout << "Veldu '";
     setColor(13);
-    cout << "Smelltu a 'h' til ad haetta." << endl;
+    cout << "h";
+    setColor(15);
+    cout << "' til ad haetta." << endl;
 }
