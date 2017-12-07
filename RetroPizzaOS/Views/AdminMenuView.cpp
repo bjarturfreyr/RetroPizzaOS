@@ -1,18 +1,42 @@
 #include "AdminMenuView.h"
 
 void AdminMenuView::displayAdminWelcome(){
-    cout << "Saelir herra admin" << endl;
+    setColor(15);
+    cout << "Velkomin/n i ";
+    setColor(12);
+    cout << "umsjon";
+    setColor(15);
+    cout << " menu." << endl << endl;
 }
 
 void AdminMenuView::displayAdminNavigation(){
-    cout << "Hvad ma bjoda der ad gera?" << endl;
-    cout << "b. Bua til pitsu" << endl;
-    cout << "l. Fa lista yfir pitsur" << endl;
-    cout << "t. Til ad fara til baka" << endl;
-    cout << endl;
+    setColor(15);
+    cout << "Veldu '";
+    setColor(14);
+    cout << "b";
+    setColor(15);
+    cout << "' til ad bua til pizzu." << endl;
+
+    cout << "Veldu '";
+    setColor(9);
+    cout << "l";
+    setColor(15);
+    cout << "' til ad fa lista yfir pizzur a matsedli." << endl;
+
+    cout << "Veldu '";
+    setColor(10);
+    cout << "t";
+    setColor(15);
+    cout << "' til ad fara til baka." << endl;
+
+    cout << "Veldu '";
+    setColor(13);
+    cout << "h";
+    setColor(15);
+    cout << "' til ad haetta." << endl;
 }
 
 void AdminMenuView::displayAdminPizzaList() {
-    cout << "Her er listi yfir pizzurnar" << endl;
-    cout << listPizzas() << endl;
+    cout << "Allar pizzur a matsedli:" << endl << endl;
+    cout << listPizzas();
 }

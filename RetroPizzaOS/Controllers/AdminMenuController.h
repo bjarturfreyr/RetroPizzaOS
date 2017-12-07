@@ -6,16 +6,18 @@
 #include "MainMenuController.h"
 #include "GlobalHelpers.h"
 #include "GlobalView.h"
+#include "conio.h"
 
 using namespace AdminMenuView;
+using namespace GlobalView;
 
 class AdminMenuController
 {
     public:
         AdminMenuController();
-        void init();
 
     private:
+        void init();
 };
 
 #endif // ADMINMENUCONTROLLER_H

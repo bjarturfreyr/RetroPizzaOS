@@ -1,17 +1,41 @@
 #include "SalesMenuView.h"
 
-void SalesMenuView::displaySalesMenu()
+void SalesMenuView::displaySalesWelcome()
 {
-    cout << " VELKOMIN A SOLUSIDU RETRO PIZZA" << endl;
+    setColor(15);
+    cout << "Velkomin/n i ";
+    setColor(11);
+    cout << "solumann";
+    setColor(15);
+    cout << " menu." << endl << endl;
 }
 
 void SalesMenuView::displaySalesNavigation()
 {
-        cout << "Hvada staerd ma bjoda ther" << endl;
-        cout << "Litil = L" << endl;
-        cout << "Midstaerd = M" << endl;
-        cout << "Stor = S" << endl;
-        cout << endl;
+    setColor(15);
+    cout << "Veldu '";
+    setColor(11);
+    cout << "s";
+    setColor(15);
+    cout << "' til ad skra nyja pontun." << endl;
+
+    cout << "Veldu '";
+    setColor(14);
+    cout << "b";
+    setColor(15);
+    cout << "' til ad breyta pontun." << endl;
+
+    cout << "Veldu '";
+    setColor(10);
+    cout << "t";
+    setColor(15);
+    cout << "' til ad fara til baka." << endl;
+
+    cout << "Veldu '";
+    setColor(13);
+    cout << "h";
+    setColor(15);
+    cout << "' til ad haetta." << endl;
 }
 
 void SalesMenuView::displaySalesPizzalist()
@@ -43,29 +67,6 @@ void SalesMenuView::velja_size(char size){
     cout << endl;
 }
 
-
-
 void SalesMenuView::velja_pizzu(int type){
-    if (type == 1){
-        cout << "Pizza valin -> Margarita √" << endl;
-    }
-    else if(type == 2){
-        cout << "Pizza valin -> Hawai √" << endl;
-    }
-    else if(type == 3){
-        cout << "Pizza valin -> Meat n' cheese √" << endl;
-    }
-    else if(type == 4){
-        cout << "Pizza valin -> Gudrun special √" << endl;
-    }
-    else if(type == 5){
-        cout << "Pizza valin -> Danni special √" << endl;
-    }
-    else if(type == 6){
-        cout << "Pizza valin -> Hunakongur special √" << endl;
-    }
-    else{
-        cout << "Pizza ekki a matsedli √" << endl;
-    }
-    cout << endl;
+    //
 }

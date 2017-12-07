@@ -14,7 +14,7 @@ MainMenuController::~MainMenuController()
 void MainMenuController::init(){
 
     char selection = '\0';
-    while (selection != 'h' && selection != 'a' && selection != 'b' && selection != 's'){
+    while (selection != 'h' && selection != 's' && selection != 'u'){
 
         clearScreen();
         displayMenuNavigation(); //Kallar í MainMenuView
@@ -23,7 +23,7 @@ void MainMenuController::init(){
 
     }
 
-    if (selection == 'a'){
+    if (selection == 'u'){
         AdminMenuController amc;
     }
 
@@ -34,6 +34,14 @@ void MainMenuController::init(){
 
     else if (selection == 's'){
         SalesMenuController smc;
+    }
+
+    else if (selection == 'a'){
+        //afhending
+    }
+
+    else if (selection == 'h'){
+        return;
     }
 
     else {

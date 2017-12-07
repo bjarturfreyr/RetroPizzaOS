@@ -9,9 +9,9 @@ void MainMenuView::displayMenuNavigation()
     setColor(15);
     cout << "Veldu '";
     setColor(12);
-    cout << "a";
+    cout << "u";
     setColor(15);
-    cout << "' fyrir Admin." << endl;
+    cout << "' fyrir Umsjon." << endl;
 
 
     cout << "Veldu '";
@@ -25,7 +25,14 @@ void MainMenuView::displayMenuNavigation()
     setColor(11);
     cout << "s";
     setColor(15);
-    cout << "' fyrir Solumann" << endl;
+    cout << "' fyrir Solumann." << endl;
+
+
+    cout << "Veldu '";
+    setColor(9);
+    cout << "a";
+    setColor(15);
+    cout << "' fyrir Afhendingu." << endl;
 
 
     cout << "Veldu '";
