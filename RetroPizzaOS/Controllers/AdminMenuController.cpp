@@ -8,7 +8,6 @@ AdminMenuController::AdminMenuController()
 }
 
 void AdminMenuController::init(){
-    int verd;
     int aleggID;
     string nafn;
 

@@ -17,6 +17,7 @@
 					<Add directory="Models" />
 					<Add directory="Views" />
 					<Add directory="Database" />
+					<Add directory="Controller" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -30,6 +31,7 @@
 					<Add directory="Models" />
 					<Add directory="Views" />
 					<Add directory="Database" />
+					<Add directory="Controller" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -46,8 +48,12 @@
 		</Compiler>
 		<Unit filename="Controllers/AdminMenuController.cpp" />
 		<Unit filename="Controllers/AdminMenuController.h" />
+		<Unit filename="Controllers/BakersMenuController.cpp" />
+		<Unit filename="Controllers/BakersMenuController.h" />
 		<Unit filename="Controllers/MainMenuController.cpp" />
 		<Unit filename="Controllers/MainMenuController.h" />
+		<Unit filename="Controllers/SalesMenuController.cpp" />
+		<Unit filename="Controllers/SalesMenuController.h" />
 		<Unit filename="Database/Database.cpp" />
 		<Unit filename="Database/Database.h" />
 		<Unit filename="Helpers/GlobalHelpers.cpp" />
@@ -56,6 +62,8 @@
 		<Unit filename="Models/Pizza.h" />
 		<Unit filename="Views/AdminMenuView.cpp" />
 		<Unit filename="Views/AdminMenuView.h" />
+		<Unit filename="Views/BakersMenuView.cpp" />
+		<Unit filename="Views/BakersMenuView.h" />
 		<Unit filename="Views/MainMenuView.cpp" />
 		<Unit filename="Views/MainMenuView.h" />
 		<Unit filename="Views/SalesMenuView.cpp" />

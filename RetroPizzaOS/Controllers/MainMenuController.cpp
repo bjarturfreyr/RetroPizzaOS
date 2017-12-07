@@ -28,8 +28,7 @@ void MainMenuController::init(){
     }
 
     else if (selection == 'b'){
-        //BakariUI = bakariUI; BÚA TIL KLASA
-        //bakariUI.startuUI();
+        BakersMenuController bmc;
     }
 
     else if (selection == 's'){
