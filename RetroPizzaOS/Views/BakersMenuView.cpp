@@ -3,13 +3,13 @@
 void BakersMenuView::displayBakersMenu()
 {
     cout << "V E L K O M I N   B A K A R I " << endl;
-    cout << endl;
+    cout << "Hvar viltu baka pizzuna? "<< endl;
     cout << endl;
 }
 
 void BakersMenuView::displayBakersNavigation()
 {
-    cout << "Her er pontun af pizzu: " << endl;
+    cout << "Her er pontun af pizzum: " << endl;
 }
 
 void BakersMenuView::displayBakersEnding()
@@ -25,6 +25,14 @@ void BakersMenuView::displayAfhendingarstadir()
 void BakersMenuView::villuskilabod()
 {
     cout << "Villa i innslatti, reyndu aftur" << endl;
+}
+void BakersMenuView::Afhendingarstadur(string afhendingarstadur)
+{
+    cout << "Bokunarstadurinn dinn er " << afhendingarstadur << endl;
+}
+void BakersMenuView::displaylistpantanir(string afhendingarstadur)
+{
+    cout << listpantanir(afhendingarstadur) << endl;
 }
 
 

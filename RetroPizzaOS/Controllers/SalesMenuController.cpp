@@ -20,6 +20,7 @@ void SalesMenuController::init()
     }
 
     if (selection == 's') {
+        displaySalesPizzalist();
         //skra nyja pontun
     }
 

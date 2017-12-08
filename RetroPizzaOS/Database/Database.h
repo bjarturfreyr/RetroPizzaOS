@@ -11,6 +11,7 @@ namespace Database {
     void addPizza(string nafn, int aleggID);
     void addAlegg(string nafn, int verd);
     string listAfhendingarstadir();
+    string listpantanir(string afhendingarstadir);
 };
 
 #endif // DATABASE_H

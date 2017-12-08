@@ -14,6 +14,9 @@ namespace BakersMenuView{
     void displayBakersEnding();
     void displayAfhendingarstadir();
 
+    void Afhendingarstadur(string);
+    void displaylistpantanir(string);
+
     void villuskilabod();
 
     void ofnMenu();

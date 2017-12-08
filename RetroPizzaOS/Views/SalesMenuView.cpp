@@ -40,14 +40,10 @@ void SalesMenuView::displaySalesNavigation()
 
 void SalesMenuView::displaySalesPizzalist()
 {
-    cout << "Veldu pizzu" << endl;
+    cout << "Hvada pizzu ma bjoda ther" << endl;
     cout << listPizzas() << endl;
 }
 
-void SalesMenuView::displaySalesOffer()
-{
-    cout << "Hvada pizzu ma bjoda ther" << endl;
-}
 
 void SalesMenuView::velja_size(char size){
 
@@ -62,7 +58,7 @@ void SalesMenuView::velja_size(char size){
         cout << "Staerd valin -> Midlungs √" << endl;
     }
     else{
-        cout << "Rangt intak " << endl;
+        cout << "Rangt inntak " << endl;
     }
     cout << endl;
 }

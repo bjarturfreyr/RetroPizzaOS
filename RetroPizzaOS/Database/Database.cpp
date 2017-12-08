@@ -46,3 +46,19 @@ string Database::listAfhendingarstadir() {
 
     return listinn;
 }
+
+string Database::listpantanir(string afhendingarstadur) {
+    string listinn;
+    string line;
+    ifstream myfile ("pantanir.txt");
+    if (myfile.is_open())
+    {
+        while (getline (myfile,line))
+        {
+            listinn = listinn + line + "\n";
+        }
+        myfile.close();
+    }
+
+    return listinn;
+}

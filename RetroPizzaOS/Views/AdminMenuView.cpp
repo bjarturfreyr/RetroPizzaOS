@@ -9,6 +9,16 @@ void AdminMenuView::displayAdminWelcome(){
     cout << " menu." << endl << endl;
 }
 
+void AdminMenuView::displayVeldu()
+{
+    cout << "Budu til heiti a pizzu og svo aleggs ID" << endl;
+}
+
+void AdminMenuView::displayContinue()
+{
+    cout << "Yttu a hvada takka sem er til ad halda afram! " << endl;
+}
+
 void AdminMenuView::displayAdminNavigation(){
     setColor(15);
     cout << "Veldu '";

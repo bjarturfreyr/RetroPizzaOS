@@ -7,15 +7,19 @@ BakersMenuController::BakersMenuController()
 
 void BakersMenuController::init()
 {
+    clearScreen();
+
     char inntak;
     string afhendingarstadur;
     displayBakersMenu();
 
     displayAfhendingarstadir();
     cin >> afhendingarstadur;
+    clearScreen();
+    Afhendingarstadur(afhendingarstadur);
 
     displayBakersNavigation();
-//    listPantanir();
+    displaylistpantanir(afhendingarstadur);
 
     do{
         ofnMenu();

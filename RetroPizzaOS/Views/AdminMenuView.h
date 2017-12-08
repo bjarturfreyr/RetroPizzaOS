@@ -14,6 +14,8 @@ namespace AdminMenuView{
     void displayAdminWelcome();
     void displayAdminNavigation();
     void displayAdminPizzaList();
+    void displayVeldu();
+    void displayContinue();
 }
 
 #endif // ADMINMENUVIEW_H

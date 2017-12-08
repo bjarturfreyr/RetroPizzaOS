@@ -14,7 +14,6 @@ namespace SalesMenuView{
     void displaySalesWelcome();
     void displaySalesNavigation();
     void displaySalesPizzalist();
-    void displaySalesOffer();
 
     void velja_size(char size);
     void velja_pizzu(int type);

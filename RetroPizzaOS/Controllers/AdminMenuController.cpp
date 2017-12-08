@@ -18,6 +18,7 @@ void AdminMenuController::init(){
         cin >> input;
 
         if(input == 'b'){
+            displayVeldu();
             cin >> nafn;
             cin >> aleggID;
             addPizza(nafn, aleggID);
@@ -26,7 +27,8 @@ void AdminMenuController::init(){
         else if(input == 'l'){
             clearScreen();
             displayAdminPizzaList();
-            getch(); //Press any key to continue..
+            displayContinue();
+            getch();
         }
 
         else if(input == 't'){

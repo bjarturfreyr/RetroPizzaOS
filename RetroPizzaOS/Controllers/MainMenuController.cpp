@@ -14,7 +14,7 @@ MainMenuController::~MainMenuController()
 void MainMenuController::init(){
 
     char selection = '\0';
-    while (selection != 'h' && selection != 's' && selection != 'u'){
+    while (selection != 'h' && selection != 's' && selection != 'u' && selection != 'b'){
 
         clearScreen();
         displayMenuNavigation(); //Kallar í MainMenuView
