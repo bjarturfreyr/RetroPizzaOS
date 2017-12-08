@@ -28,7 +28,7 @@
 	<iostream>
 	"GlobalHelpers.h"
 
-1512658020 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.cpp
+1512659186 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.cpp
 	"MainMenuController.h"
 
 1512657928 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.cpp
@@ -100,16 +100,17 @@
 1512737293 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.cpp
 	"AdminMenuView.h"
 
-1512655060 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.cpp
+1512661227 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.cpp
 	"AdminMenuController.h"
 
-1512653280 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.h
+1512661251 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.h
 	"AdminMenuView.h"
 	"Pizza.h"
 	"MainMenuController.h"
 	"GlobalHelpers.h"
 	"GlobalView.h"
 	"conio.h"
+	"Database.h"
 
 1512653657 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.h
 	<iostream>
@@ -123,7 +124,7 @@
 1512486374 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\models\pizza.cpp
 	"Pizza.h"
 
-1512658037 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.cpp
+1512660565 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.cpp
 	"AdminMenuView.h"
 
 1512661969 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\database\database.h
@@ -153,7 +154,7 @@
 1512738968 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\views\salesmenuview.cpp
 	"SalesMenuView.h"
 
-1512651166 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\database\database.h
+1512661269 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\database\database.h
 	<string>
 	<fstream>
 
@@ -224,4 +225,10 @@
 1512658953 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\bakersmenuview.h
 	<iostream>
 	"Database.h"
+
+1512658953 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\bakersmenucontroller.cpp
+	"BakersMenuController.h"
+
+1512658953 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\bakersmenuview.cpp
+	"BakersMenuView.h"
 
