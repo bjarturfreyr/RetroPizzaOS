@@ -1,6 +1,0 @@
-litil
-1000
-medium
-2000
-large
-3000
