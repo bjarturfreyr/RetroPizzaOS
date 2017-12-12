@@ -1,0 +1,85 @@
+# depslib dependency file v1.0
+1512394510 source:c:\users\bjarturfreyr\c++verkefni\retropizzaos\main.cpp
+	<iostream>
+	"MainMenuController.h"
+
+1512395465 c:\users\bjarturfreyr\c++verkefni\retropizzaos\controllers\mainmenucontroller.h
+	<iostream>
+	"MainMenuView.h"
+
+1512395465 c:\users\bjarturfreyr\c++verkefni\retropizzaos\views\mainmenuview.h
+	<iostream>
+
+1512395465 ated upstream
+
+1512478516 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\main.cpp
+	<iostream>
+	"MainMenuController.h"
+
+1512479926 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.h
+	<iostream>
+	"MainMenuView.h"
+	"GlobalHelpers.h"
+
+1512395465 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.h
+	<iostream>
+
+1512395592 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.cpp
+	"MainMenuController.h"
+
+1512479176 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.cpp
+	"MainMenuView.h"
+
+1512479582 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\helpers\globalhelpers.h
+	<stdlib.h>
+
+1512479582 
+
+1512483015 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.cpp
+	"MainMenuController.h"
+
+1512482884 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.h
+	<iostream>
+	"MainMenuView.h"
+	"GlobalHelpers.h"
+	"AdminMenuController.h"
+
+1512396579 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.h
+	<iostream>
+
+1512482884 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\main.cpp
+	<iostream>
+	"MainMenuController.h"
+
+1512480574 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.cpp
+	"MainMenuView.h"
+
+1512484340 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.cpp
+	"AdminMenuController.h"
+	"AdminMenuView.h"
+
+1512482687 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.h
+	"AdminMenuView.h"
+	"Pizza.h"
+
+1512482519 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\models\pizza.cpp
+	"Pizza.h"
+
+1512482519 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\models\pizza.h
+	<string>
+	<iostream>
+
+1512479975 shed changes
+
+1512480574 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\helpers\globalhelpers.h
+	<stdlib.h>
+
+1512480574 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\helpers\globalhelpers.cpp
+	"GlobalHelpers.h"
+
+1512483459 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.h
+	<iostream>
+
+1512484240 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\views\adminmenuview.cpp
+	"AdminMenuView.h"
+

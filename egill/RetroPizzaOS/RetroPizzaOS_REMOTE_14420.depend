@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1512394510 source:c:\users\bjarturfreyr\c++verkefni\retropizzaos\main.cpp
+	<iostream>
+	"MainMenuController.h"
+
+1512395465 c:\users\bjarturfreyr\c++verkefni\retropizzaos\controllers\mainmenucontroller.h
+	<iostream>
+	"MainMenuView.h"
+
+1512395465 c:\users\bjarturfreyr\c++verkefni\retropizzaos\views\mainmenuview.h
+	<iostream>
+
+1512396579 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.cpp
+	"MainMenuController.h"
+
+1512396579 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\controllers\mainmenucontroller.h
+	<iostream>
+	"MainMenuView.h"
+
+1512396579 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.h
+	<iostream>
+
+1512401182 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\main.cpp
+	<iostream>
+	"MainMenuController.h"
+
+1512396579 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\views\mainmenuview.cpp
+	"MainMenuView.h"
+
+1512480024 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.cpp
+	"AdminMenuController.h"
+
+1512479040 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\controllers\adminmenucontroller.h
+
+1512479975 source:c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\models\pizza.cpp
+	"Pizza.h"
+
+1512479975 c:\users\danni\desktop\repositories\retropizzaos\retropizzaos\models\pizza.h
+	<string>
+
