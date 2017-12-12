@@ -13,7 +13,7 @@ void AfhendingMenuController::mainmenu(){
 
 void AfhendingMenuController::validateafhendingarstadur(char afhendingarstadur){
 
-
+/*
     if (afhendingarstadur == 'k'){
         database.addPizzaToKopavogur(pizza);
     }
@@ -32,4 +32,5 @@ void AfhendingMenuController::validateafhendingarstadur(char afhendingarstadur){
     else{
         cout << "Rangt inntak" << endl;
     }
+    */
 }

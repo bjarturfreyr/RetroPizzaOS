@@ -1,26 +1,15 @@
 #include "DeliveryMenuView.h"
 
-void DeliveryMenuView::displayDeliveryWelcome()
-{
+void DeliveryMenuView::displayDeliveryWelcome1(){
     setColor(15);
     cout << "Velkomin/n i ";
-    setColor(11);
-    cout << "afhendingar";
+    setColor(5);
+    cout << "afhending";
     setColor(15);
     cout << " menu." << endl << endl;
-
-    cout << "A hvada afhendingarstad viltu vera a? " << endl;
-    cout << "K = Koparvogur" << endl;
-    cout << "G = Grafarrvogur" << endl;
-    cout << "V = Vesturbaer" << endl;
-    cout << "H = Hafnafjordur" << endl;
-    cout << "S = Selfoss" << endl;
-
-    cout << endl;
-    cout << endl;
 }
 
-void DeliveryMenuView::displayDeliveryNavigation(){
+void DeliveryMenuView::displayDeliveryNavigation1(){
     cout << "Veldu '";
     setColor(5);
     cout << "a";
@@ -28,17 +17,20 @@ void DeliveryMenuView::displayDeliveryNavigation(){
     cout << "' til ad velja afhendingastad." << endl;
     setColor(15);
 
+
+    cout << "Veldu '";
+    setColor(4);
+    cout << "p";
+    setColor(15);
+    cout << "' til ad fa upp pantanir a afhendingarstad." << endl;
+
+
     cout << "Veldu '";
     setColor(14);
     cout << "b";
     setColor(15);
-    cout << "' til ad fa lista af tilbunum pontunum fyrir dennan stad." << endl;
+    cout << "' til ad fa upp tilbunar pantanir." << endl;
 
-    cout << "Veldu '";
-    setColor(10);
-    cout << "c";
-    setColor(15);
-    cout << "' til ad fa upp tiltekna pontun." << endl;
 
     cout << "Veldu '";
     setColor(3);
@@ -53,11 +45,13 @@ void DeliveryMenuView::displayDeliveryNavigation(){
     setColor(15);
     cout << "' til ad fa upp tiltekna pontun." << endl;
 
+
     cout << "Veldu '";
     setColor(10);
     cout << "t";
     setColor(15);
     cout << "' til ad fara til baka." << endl;
+
 
     cout << "Veldu '";
     setColor(13);

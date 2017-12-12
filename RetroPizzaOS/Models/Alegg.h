@@ -12,11 +12,11 @@ class Alegg{
 
 private:
     string name;
-    double price;
+    double price = 50;
 
 public:
     Alegg();
-    Alegg(string name, double price);
+    Alegg(string name);
 
     friend ifstream& operator >>(ifstream& fin, Alegg& alegg);
     friend ofstream& operator <<(ofstream& fout, const Alegg& alegg);
@@ -24,7 +24,6 @@ public:
     string getName();
     double getPrice();
     void setName(string name);
-    void setPrice(double price);
  };
 
 #endif // ALEGG_H

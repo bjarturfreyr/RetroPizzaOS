@@ -48,12 +48,12 @@
 		</Compiler>
 		<Unit filename="Controllers/AdminMenuController.cpp" />
 		<Unit filename="Controllers/AdminMenuController.h" />
-		<Unit filename="Controllers/AfhendingMenuController.cpp" />
-		<Unit filename="Controllers/AfhendingMenuController.h" />
 		<Unit filename="Controllers/BakersMenuController.cpp" />
 		<Unit filename="Controllers/BakersMenuController.h" />
 		<Unit filename="Controllers/DeliveryController.cpp" />
 		<Unit filename="Controllers/DeliveryController.h" />
+		<Unit filename="Controllers/DeliveryMenuController.cpp" />
+		<Unit filename="Controllers/DeliveryMenuController.h" />
 		<Unit filename="Controllers/MainMenuController.cpp" />
 		<Unit filename="Controllers/MainMenuController.h" />
 		<Unit filename="Controllers/SalesMenuController.cpp" />
@@ -62,8 +62,11 @@
 		<Unit filename="Database/Database.h" />
 		<Unit filename="Helpers/GlobalHelpers.cpp" />
 		<Unit filename="Helpers/GlobalHelpers.h" />
+		<Unit filename="Models/Afhendingastadir.h" />
 		<Unit filename="Models/Alegg.cpp" />
 		<Unit filename="Models/Alegg.h" />
+		<Unit filename="Models/Medlaeti.cpp" />
+		<Unit filename="Models/Medlaeti.h" />
 		<Unit filename="Models/Pizza.cpp" />
 		<Unit filename="Models/Pizza.h" />
 		<Unit filename="Views/AdminMenuView.cpp" />
@@ -72,6 +75,8 @@
 		<Unit filename="Views/BakersMenuView.h" />
 		<Unit filename="Views/DeliveryMenuView.cpp" />
 		<Unit filename="Views/DeliveryMenuView.h" />
+		<Unit filename="Views/GlobalView.cpp" />
+		<Unit filename="Views/GlobalView.h" />
 		<Unit filename="Views/MainMenuView.cpp" />
 		<Unit filename="Views/MainMenuView.h" />
 		<Unit filename="Views/SalesMenuView.cpp" />

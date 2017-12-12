@@ -3,15 +3,14 @@
 Alegg::Alegg()
 {
     this->name = "";
-    this->price = 0;
+    this->price = 50;
 }
 
-Alegg::Alegg(string name, double price)
+Alegg::Alegg(string name)
 {
     this->name = name;
-    this->price = price;
+    this->price = 50;
 }
-
 
 ofstream& operator << (ofstream& fout, const Alegg& alegg){
     fout << alegg.name;
@@ -24,8 +23,6 @@ ifstream& operator >> (ifstream& fin, Alegg& alegg){
     fin >> alegg.price;
     return fin;
 }
-
-
 
 string Alegg::getName()
 {
@@ -41,12 +38,3 @@ void Alegg::setName(string name)
 {
     this->name = name;
 }
-
-void Alegg::setPrice(double price)
-{
-    this->price = price;
-}
-
-
-
-

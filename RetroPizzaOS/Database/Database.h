@@ -6,6 +6,8 @@
 #include <fstream>
 #include "Pizza.h"
 #include <vector>
+#include <cstddef>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -14,10 +16,19 @@ class Database {
     Database();
     vector<Pizza> getListOfPizzasOnMenu();
     void addPizzaToMenu(const Pizza& pizza);
-    void addAlegg(string nafn, int verd);
     string listAfhendingarstadir();
     void addPizzaToUnbakedListInStoreLocation(Pizza pizza, string storeLocation);
     void addSize(string);
+    string getAllPizzaSizesOnDatabase();
+    vector<Alegg> getAllToppingsOnDatabase();
+    int getPizzaPriceBySizeID(int mySize);
+    string displayToppingList();
+    void getaleggformypizza(int myChoice);
+    void addPizzaSize(string name, int price);
+    void addAlegg(string name);
+    void addAfhendingarstadir(string name);
+    void addMedlaeti(string name, int price);
+
 
     //afhending
     void addPizzaToKopavogur(const Pizza& pizza);
@@ -42,6 +53,7 @@ class Database {
     vector<Pizza> vsb;
     vector<Pizza> grafarvogur;
     vector<Pizza> selfoss;
+    vector<Alegg> aleggs;
 };
 
 #endif // DATABASE_H

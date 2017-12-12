@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <fstream>
 #include "Pizza.h"
 #include "Alegg.h"
 #include "AdminMenuView.h"
@@ -23,6 +24,10 @@ class AdminMenuController
     private:
         void init();
         void createPizzaToMenu();
+        void createPizzaSize();
+        void createAlegg();
+        void createAfhendingarstadur();
+        void createMedlaeti();
         Database db;
 };
 

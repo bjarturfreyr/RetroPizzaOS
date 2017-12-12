@@ -1,8 +1,18 @@
 #include "DeliveryMenuController.h"
 
-DeliveryMenuController::DeliveryMenuController()
+string afhendingarstadur;
+
+DeliveryMenuController::DeliveryMenuController(Database db)
 {
     init();
+    this->db = db;
+}
+
+void DeliveryMenuController::veljaAfhendingarstad(){
+    cout << db.listAfhendingarstadir() << endl;
+    cout << "Vinsamlegast veldu afhendingarstad" << endl;
+    cin >> afhendingarstadur;
+    getch();
 }
 
 void DeliveryMenuController::init(){
@@ -10,13 +20,13 @@ void DeliveryMenuController::init(){
 
     while(input != 'h'){
         clearScreen();
-        displayDeliveryWelcome();
-        displayDeliveryNavigation();
+        displayDeliveryWelcome1();
+        displayDeliveryNavigation1();
 
         cin >> input;
 
         if(input == 'a'){
-            //Velja afhendingastað
+            veljaAfhendingarstad();
         }
 
         else if(input == 'p'){
@@ -36,7 +46,7 @@ void DeliveryMenuController::init(){
         }
 
         else if(input == 't'){
-            MainMenuController mmc;
+            //MainMenuController mmc;
         }
 
         else {

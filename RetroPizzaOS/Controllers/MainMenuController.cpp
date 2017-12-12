@@ -12,7 +12,7 @@ void MainMenuController::init(){
     while (selection != 'a' && selection != 'h' && selection != 's' && selection != 'u' && selection != 'b'){
 
         clearScreen();
-       // displayHeader();
+        displayHeader();
         displayMenuNavigation(); //Kallar í MainMenuView
 
         cin >> selection; //Controllerin sem við erum í sér um að taka inn input.
@@ -33,11 +33,11 @@ void MainMenuController::init(){
 
     else if (selection == 'a'){
 
-        DeliveryController dmc;
+        DeliveryMenuController dmc(this->db);
     }
 
     else if (selection == 'h'){
-        //bye
+        exit(0);
     }
 
     else {

@@ -52,7 +52,7 @@ void SalesMenuController::init()
     }
 
     else {
-        //bye
+
     }
 }
 

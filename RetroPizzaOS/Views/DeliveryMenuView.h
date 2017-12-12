@@ -10,8 +10,8 @@ using namespace std;
 namespace DeliveryMenuView
 {
     void displayDeliveryMenu();
-    void displayDeliveryWelcome();
-    void displayDeliveryNavigation();
+    void displayDeliveryWelcome1();
+    void displayDeliveryNavigation1();
 };
 
 #endif // DELIVERYMENUVIEW_H

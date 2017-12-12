@@ -1,5 +1,14 @@
 Small
+500
 Medium
+1000
 Large
+1500
 Huge
+2000
 Tiny
+100
+Gigantic
+5000
+Titanic
+10000
