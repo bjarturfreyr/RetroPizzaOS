@@ -1,2 +1,0 @@
-# RetroPizzaOS
-Pizza ordering system
