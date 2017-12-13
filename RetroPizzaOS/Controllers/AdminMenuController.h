@@ -28,6 +28,7 @@ class AdminMenuController
         void createAlegg();
         void createAfhendingarstadur();
         void createMedlaeti();
+        void addaleggtomenu(int numberoftoppings);
         Database db;
 };
 

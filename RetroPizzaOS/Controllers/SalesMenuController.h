@@ -19,6 +19,7 @@ class SalesMenuController
 
     private:
         void init();
+        void createPizzaForUser();
         Database db;
 };
 

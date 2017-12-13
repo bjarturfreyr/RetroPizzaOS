@@ -48,10 +48,16 @@ void SalesMenuView::displaySalesNavigation()
     }
 }
 */
+
+void SalesMenuView::displaySalesWhatYouWannaDo()
+{
+    cout << "Veldu 'm' til ad fa upp lista af matsedli" << endl;
+    cout << "Veldu 'b' til ad bua til dina eigin pizzu" << endl;
+}
+
 void SalesMenuView::displaySalesSize()
 {
     cout << "Hvada staerd ma bjoda der? " << endl;
-    cout << "Litil (l), Midlungs (m) eda Stor (s): " << endl;
 }
 
 void SalesMenuView::velja_size(char size){
