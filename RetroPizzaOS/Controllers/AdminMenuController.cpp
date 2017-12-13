@@ -140,7 +140,9 @@ void AdminMenuController::createPizzaToMenu()
 
     for (int i = 0; i < toppingcount; i++){
             cin >> aleggChoice;
-            cout << "Thu valdir " << db.getAleggByID(aleggChoice) << endl;
+            string alegg = db.getAleggByID(aleggChoice);
+            cout << "Thu valdir " << alegg << endl;
+            myAlegg.push_back(alegg);
     }
 
     int sizeprice = db.getPizzaPriceBySizeID(mySize);
@@ -148,50 +150,27 @@ void AdminMenuController::createPizzaToMenu()
 
     cout << "Pizzan kostar: " << totalpizzaprice;
 
+    Pizza pizza;
+
+    pizza.setName(name);
+    pizza.setVerd(totalpizzaprice);
+    pizza.setAlegg(myAlegg);
+
+    db.addPizzaToMenu(pizza);
+
     getch();
-
-    /*
-    vector<Alegg> alegg = this->db.getAllToppingsOnDatabase();
-    cout << db.displayToppingList();
-
-
-    cout << "Hversu morg alegg ma bjoda ther: ";
-    int toppingcount;
-    cin >> toppingcount;
-    cout << endl;
-
-    vector<Alegg> myAlegg;
-
-    for(int i = 0; i < toppingcount; i++)
-    {
-        cout << "Hvada alegg langar thig i: ";
-        int myCoice;
-        cin >> myCoice;
-        cout << endl;
-        myAlegg.push_back(alegg[i]);
-        price += 50;
-    }
-
-*/
-
-//    Pizza pizza(0, name,price, myAlegg);
-   // displayAddedPizza(pizza);
-
-
-    //this->db.addPizzaToMenu(pizza);
 }
 
 void AdminMenuController::addaleggtomenu(int toppingcount){
     vector <string> listmyalegg;
     string alegg;
     for (int i = 0; i < toppingcount; i++){
-             cin >> alegg;
-               listmyalegg.push_back(alegg);
-        }
-            for(unsigned int i = 0; i < listmyalegg.size(); i++){
-                    cout << listmyalegg[i] << " ";
-            }
-
+        cin >> alegg;
+        listmyalegg.push_back(alegg);
+    }
+    for(unsigned int i = 0; i < listmyalegg.size(); i++){
+        cout << listmyalegg[i] << " ";
+    }
 }
 
 

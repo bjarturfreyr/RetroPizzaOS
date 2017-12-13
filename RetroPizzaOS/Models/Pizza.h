@@ -12,24 +12,24 @@ class Pizza
 {
     public:
         Pizza();
-        Pizza(int numer_pizzu, string nafn, double verd, vector<Alegg> alegg);
+        Pizza(string nafn, int verd, vector<string> alegg);
 
         string getNafn();
-        double getVerd();
-        int getnumber();
-        vector<Alegg> getAlegg();
+        int getVerd();
+        vector<string> getAlegg();
+
+        void setName(string nafn);
+        void setVerd(int verd);
+        void setAlegg(vector<string> alegg);
 
         friend ofstream& operator << (ofstream& out, const Pizza& pizza);
         friend ifstream& operator >> (ifstream& in, Pizza& pizza);
 
-
-
     private:
         string nafn;
-        double verd;
+        int verd;
         int aleggsFjoldi;
-        vector<Alegg> alegg;
-        int numer_pizzu;
+        vector<string> alegg;
 };
 
 #endif // PIZZA_H
