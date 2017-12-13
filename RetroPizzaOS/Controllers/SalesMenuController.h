@@ -19,6 +19,7 @@ class SalesMenuController
 
     private:
         void init();
+        Database db;
 };
 
 #endif // SALESMENUCONTROLLER_H

@@ -35,6 +35,7 @@ void SalesMenuController::init()
             }while (staerdpizzu != 's' && staerdpizzu != 'S' && staerdpizzu != 'm' && staerdpizzu != 'M' && staerdpizzu != 'l' && staerdpizzu != 'L');
 
 
+
             addToOrder();
             cin >> addtoorder;
 
@@ -44,7 +45,7 @@ void SalesMenuController::init()
 
     else if (selection == 't') {
 
-        //MainMenuController mmc(this->db);
+        MainMenuController mmc(this->db);
     }
 
     else if (selection == 'b') {
@@ -54,5 +55,7 @@ void SalesMenuController::init()
     else {
 
     }
+
+    exit(0);
 }
 

@@ -46,11 +46,12 @@ void DeliveryMenuController::init(){
         }
 
         else if(input == 't'){
-            //MainMenuController mmc;
+            MainMenuController mmc(this->db);
         }
 
         else {
             //try again
         }
     }
+    exit(0);
 }
