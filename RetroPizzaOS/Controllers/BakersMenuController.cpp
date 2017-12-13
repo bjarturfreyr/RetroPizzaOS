@@ -1,12 +1,56 @@
 #include "BakersMenuController.h"
 
-BakersMenuController::BakersMenuController()
+BakersMenuController::BakersMenuController(Database db)
 {
     init();
 }
 
 void BakersMenuController::init()
 {
+    char input;
+
+    while(input != 'h')
+    {
+        clearScreen();
+        displayBakersWelcome();
+        displayBakersNavigation();
+
+        cin >> input;
+
+        if(input == 'a')
+        {
+            //velja afhendingarstad
+        }
+
+        else if(input == 'b')
+        {
+            //fá upp lista af pontuðum pizzum a þessum stað
+        }
+
+        else if (input == 's')
+        {
+            //fá upp tiltekna pantaða pizzu
+        }
+
+        else if (input == 'n')
+        {
+            //merkja pizzu greidda eda afhenta
+        }
+
+        else if(input == 't')
+        {
+            MainMenuController mmc(this->db);
+        }
+
+        else
+        {
+            //bye
+        }
+    }
+    exit(0);
+
+    //GAMALL KOÐI
+    /*
     char inntak;
     char afhendingarstadur;
     int numerpizzu;
@@ -73,4 +117,5 @@ void BakersMenuController::init()
     }while(inntak != 'n' && inntak != 'N' && inntak != 'y' && inntak != 'Y');
 
     displayBakersEnding();
+    */
 }

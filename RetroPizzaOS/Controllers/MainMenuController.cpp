@@ -24,7 +24,7 @@ void MainMenuController::init(){
     }
 
     else if (selection == 'b'){
-        BakersMenuController bmc;
+        BakersMenuController bmc(this->db);
     }
 
     else if (selection == 's'){

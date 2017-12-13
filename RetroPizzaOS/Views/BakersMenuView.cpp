@@ -1,13 +1,68 @@
 #include "BakersMenuView.h"
 
+void BakersMenuView::displayBakersWelcome(){
+    setColor(15);
+    cout << "Velkomin/n i ";
+    setColor(14);
+    cout << "bakara";
+    setColor(15);
+    cout << " menu." << endl << endl;
+}
+
+void BakersMenuView::displayBakersNavigation(){
+
+    cout << "Veldu '";
+    setColor(5);
+    cout << "a";
+    setColor(15);
+    cout << "' til ad velja afhendingarstad." << endl;
+
+
+    cout << "Veldu '";
+    setColor(14);
+    cout << "b";
+    setColor(15);
+    cout << "' til ad fa upp lista af pontudum pizzum." << endl;
+
+
+    setColor(15);
+    cout << "Veldu '";
+    setColor(11);
+    cout << "s";
+    setColor(15);
+    cout << "' til ad fa upp tiltekna pantada pizzu." << endl;
+
+
+    cout << "Veldu '";
+    setColor(6);
+    cout << "n";
+    setColor(15);
+    cout << "' til ad merkja pizzu greidda eda afhenta." << endl;
+
+
+    cout << "Veldu '";
+    setColor(10);
+    cout << "t";
+    setColor(15);
+    cout << "' til ad fara til baka." << endl;
+
+
+    cout << "Veldu '";
+    setColor(13);
+    cout << "h";
+    setColor(15);
+    cout << "' til ad haetta." << endl;
+}
+
+/*
 void BakersMenuView::displayBakersWelcome()
 {
- /*   setColor(15);
+    setColor(15);
     cout << "Velkomin/n i ";
     setColor(11);
     cout << "bakstur";
     setColor(15);
-  */  cout << " menu." << endl << endl;
+    cout << " menu." << endl << endl;
 }
 
 void BakersMenuView::displayBakersMenu()
@@ -49,6 +104,7 @@ void BakersMenuView::displayBakersNavigation(char afhendingarstadur)
 
     cout << "Her er pontun af pizzu: " << endl;
 }
+
 void BakersMenuView::bakersGetPizza()
 {
     cout << "Numer hvad er pizzan sem du vilt baka? " << endl;
@@ -119,4 +175,4 @@ void BakersMenuView::tilbuinNuna()
     cout << ":(" << endl;
     cout << "Er pizzan nuna tilbuin til afhendingar? ";
 }
-
+*/

@@ -3,15 +3,18 @@
 
 #include <iostream>
 #include "Database.h"
+#include "GlobalHelpers.h"
 
 using namespace std;
+using namespace GlobalHelpers;
 
 namespace BakersMenuView{
+    void displayBakersNavigation();
+    void displayBakersWelcome();
+    /*
     void displayBakersMenu();
-    void displayBakersNavigation(char);
     void displayBakersEnding();
     void displayAfhendingarstadir();
-    void displayBakersWelcome();
     void selectPizza(int numerpizzu);
 
     void bakersGetPizza();
@@ -29,6 +32,7 @@ namespace BakersMenuView{
     void tilbuinMenu();
     void tilbuinReddy();
     void tilbuinNuna();
+    */
 };
 
 #endif // BAKERSMENUVIEW_H
