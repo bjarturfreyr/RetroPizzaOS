@@ -180,3 +180,18 @@ void AdminMenuController::createPizzaToMenu()
     //this->db.addPizzaToMenu(pizza);
 }
 
+void AdminMenuController::addaleggtomenu(int toppingcount){
+    vector <string> listmyalegg;
+    string alegg;
+    for (int i = 0; i < toppingcount; i++){
+             cin >> alegg;
+               listmyalegg.push_back(alegg);
+        }
+            for(unsigned int i = 0; i < listmyalegg.size(); i++){
+                    cout << listmyalegg[i] << " ";
+            }
+
+}
+
+
+
