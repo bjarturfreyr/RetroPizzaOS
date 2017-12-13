@@ -9,7 +9,8 @@ DeliveryMenuController::DeliveryMenuController(Database db)
 }
 
 void DeliveryMenuController::veljaAfhendingarstad(){
-    cout << db.listAfhendingarstadir() << endl;
+    vector<string> allAfhendingarstadir = db.getAllAfhendingarstadirOnDatabase();
+    displayAllAfhendingarstadir(allAfhendingarstadir);
     cout << "Vinsamlegast veldu afhendingarstad" << endl;
     cin >> afhendingarstadur;
     getch();

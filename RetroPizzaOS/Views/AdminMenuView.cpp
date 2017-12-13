@@ -90,3 +90,18 @@ void AdminMenuView::displayAdminPizzaList(vector<Pizza> listOfPizzasOnMenu) {
      }
     cout << "Press any key to continue..";
 }
+
+
+void AdminMenuView::displayAllPizzaSizes(vector<string> listOfPizzaSizes)
+{
+    for(int i = 0; i < listOfPizzaSizes.size(); i++){
+        cout << i+1 << ": " << listOfPizzaSizes[i] << endl;
+    }
+}
+
+void AdminMenuView::displayAllToppings(vector<string> listOfToppings)
+{
+    for(int i = 0; i < listOfToppings.size(); i++){
+        cout << i+1 << ": " << listOfToppings[i] << endl;
+    }
+}

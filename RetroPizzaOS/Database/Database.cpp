@@ -11,6 +11,7 @@ void Database::addPizzaToMenu(const Pizza& pizza) {
         fout.close();
     }
 }
+
 vector<Pizza> Database::getListOfPizzasOnMenu(){
     vector<Pizza> listOfPizzasOnMenu;
     ifstream fin;
@@ -46,6 +47,7 @@ string Database::listPizzas() {
     return pizzalist;
 }
 */
+
 /*void Database::addPizza(string nafn, int aleggID) {
     ofstream myfile;
     myfile.open ("menu.txt", ios::app);
@@ -54,20 +56,22 @@ string Database::listPizzas() {
 }
 */
 
-string Database::listAfhendingarstadir() {
-    string listinn;
-    string line;
+vector<string> Database::getAllAfhendingarstadirOnDatabase() {
+    vector<string> myList;
+
+    string myAfhendingarstadur;
+
     ifstream myfile ("afhendingarstadir.txt");
     if (myfile.is_open())
     {
-        while (getline (myfile,line))
+        while (getline (myfile, myAfhendingarstadur))
         {
-            listinn = listinn + line + "\n";
+            myList.push_back(myAfhendingarstadur);
         }
         myfile.close();
     }
 
-    return listinn;
+    return myList;
 }
 
 void Database::addSize(string staerd) {
@@ -89,43 +93,43 @@ void Database::addPizzaToUnbakedListInStoreLocation(Pizza pizza, string storeLoc
     }
 }
 
-string Database::getAllPizzaSizesOnDatabase()
+vector<string> Database::getAllPizzaSizesOnDatabase()
 {
-    string sizelist;
-    string line;
+    vector<string> myList;
+
+    string mySize;
+
+
     ifstream myfile ("staerdir.txt");
     if (myfile.is_open())
     {
         int i = 0;
-        while (getline (myfile,line))
+        while (getline (myfile, mySize))
         {
             if (i % 2 == 0) {
-                sizelist = sizelist + line + "\n";
+                myList.push_back(mySize);
             }
             i++;
         }
         myfile.close();
     }
 
-    return sizelist;
+    return myList;
 }
 
-vector<Alegg> Database::getAllToppingsOnDatabase()
+vector<string> Database::getAllToppingsOnDatabase()
 {
-    //vector<Alegg> AllToppingsOnDatabase;
+    vector<string> myList;
     ifstream myfile ("alegg.txt");
     if (myfile.is_open())
     {
         Alegg alegg;
         while (myfile >> alegg) {
-            aleggs.push_back(alegg);
+            myList.push_back(alegg.getName());
         }
         myfile.close();
     }
-    else {
-        cout << "FAIL" << endl;
-    }
-    return aleggs;
+    return myList;
 }
 /*
 void Database::getaleggformypizza(int myChoice){
@@ -159,23 +163,6 @@ int Database::getPizzaPriceBySizeID(int mySize){
     }
 
     return verd;
-}
-
-string Database::displayToppingList() {
-    string toppinglist;
-    string line;
-
-    ifstream myfile ("alegg.txt");
-    if (myfile.is_open())
-    {
-        while (getline (myfile,line))
-        {
-            toppinglist = toppinglist + line + "\n";
-        }
-        myfile.close();
-    }
-
-    return toppinglist;
 }
 
 void Database::addPizzaSize(string name, int price) {

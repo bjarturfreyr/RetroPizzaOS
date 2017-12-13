@@ -117,14 +117,16 @@ void AdminMenuController::createPizzaToMenu()
     string name;
     cin >> name;
     cout << endl;
-
-    cout << db.getAllPizzaSizesOnDatabase() << endl;
+    vector<string>  allPizzaSizes = db.getAllPizzaSizesOnDatabase();
+    displayAllPizzaSizes(allPizzaSizes);
     cout << "Size: ";
     int mySize;
     cin >> mySize;
     cout << endl;
 
-    cout << db.displayToppingList() << endl;
+    //vector<string> allToppings = db.getAllToppingsOnDatabase();
+    vector<string> allToppings = db.getAllPizzaSizesOnDatabase();
+    displayAllToppings(allToppings);
     cout << "Hversu morg alegg ma bjoda ther: ";
     int toppingcount;
     cin >> toppingcount;

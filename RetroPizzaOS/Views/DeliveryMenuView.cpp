@@ -59,3 +59,10 @@ void DeliveryMenuView::displayDeliveryNavigation1(){
     setColor(15);
     cout << "' til ad haetta." << endl;
 }
+
+void DeliveryMenuView::displayAllAfhendingarstadir(vector<string> listOfAfhendingarstadir)
+{
+    for(int i = 0; i < listOfAfhendingarstadir.size(); i++){
+        cout << i+1 << ": " << listOfAfhendingarstadir[i] << endl;
+    }
+}

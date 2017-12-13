@@ -16,13 +16,13 @@ class Database {
     Database();
     vector<Pizza> getListOfPizzasOnMenu();
     void addPizzaToMenu(const Pizza& pizza);
-    string listAfhendingarstadir();
+    vector<string> getAllAfhendingarstadirOnDatabase();
     void addPizzaToUnbakedListInStoreLocation(Pizza pizza, string storeLocation);
     void addSize(string);
-    string getAllPizzaSizesOnDatabase();
-    vector<Alegg> getAllToppingsOnDatabase();
+    vector<string> getAllPizzaSizesOnDatabase();
+    vector<string> getAllToppingsOnDatabase();
     int getPizzaPriceBySizeID(int mySize);
-    string displayToppingList();
+    vector<string> displayToppingList();
     void getaleggformypizza(int myChoice);
     void addPizzaSize(string name, int price);
     void addAlegg(string name);
