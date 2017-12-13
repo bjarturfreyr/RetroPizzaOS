@@ -14,13 +14,11 @@ Alegg::Alegg(string name)
 
 ofstream& operator << (ofstream& fout, const Alegg& alegg){
     fout << alegg.name;
-    fout << alegg.price;
     return fout;
 }
 
 ifstream& operator >> (ifstream& fin, Alegg& alegg){
     fin >> alegg.name;
-    fin >> alegg.price;
     return fin;
 }
 

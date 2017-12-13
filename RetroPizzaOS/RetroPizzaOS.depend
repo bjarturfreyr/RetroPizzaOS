@@ -573,7 +573,7 @@
 1513010587 source:c:\users\danni\desktop\repositories2\backup\retropizzaos\retropizzaos\views\salesmenuview.cpp
 	"SalesMenuView.h"
 
-1513171698 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\adminmenucontroller.cpp
+1513179141 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\adminmenucontroller.cpp
 	"AdminMenuController.h"
 
 1513096122 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\adminmenucontroller.h
@@ -605,7 +605,7 @@
 	"Database.h"
 	"GlobalHelpers.h"
 
-1513172251 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\database\database.h
+1513178589 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\database\database.h
 	<iostream>
 	<string>
 	<fstream>
@@ -696,13 +696,13 @@
 	<iostream>
 	"MainMenuController.h"
 
-1513092672 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\models\alegg.cpp
+1513174054 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\models\alegg.cpp
 	"Alegg.h"
 
 1513083914 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\models\pizza.cpp
 	"Pizza.h"
 
-1513171228 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\views\adminmenuview.cpp
+1513173400 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\views\adminmenuview.cpp
 	"AdminMenuView.h"
 
 1513168297 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\views\bakersmenuview.cpp
@@ -722,7 +722,7 @@
 1513083914 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\views\salesmenuview.cpp
 	"SalesMenuView.h"
 
-1513172251 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\database\database.cpp
+1513178781 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\database\database.cpp
 	"Database.h"
 
 1513092748 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\models\medlaeti.cpp

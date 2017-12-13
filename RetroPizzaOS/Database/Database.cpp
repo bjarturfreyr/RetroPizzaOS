@@ -117,29 +117,45 @@ vector<string> Database::getAllPizzaSizesOnDatabase()
     return myList;
 }
 
+/*
+string Database::getPizzaSizeByID(int id) {
+    string mySize;
+    string line;
+    ifstream myfile ("staerdir.txt");
+    if (myfile.is_open())
+    {
+        int num2 = 0;
+        for (int i = 0; i < mySize; i++) {
+            num2 += 2;
+        }
+        for (int i = 0; i <= num2; i++) {
+            getline (myfile,line);
+            if (i == num2) {
+                mySize = getline(myfile, line);
+            }
+        }
+
+        myfile.close();
+    }
+
+    return mySize;
+}
+*/
+
 vector<string> Database::getAllToppingsOnDatabase()
 {
     vector<string> myList;
+    string myTopping;
     ifstream myfile ("alegg.txt");
     if (myfile.is_open())
     {
-        Alegg alegg;
-        while (myfile >> alegg) {
-            myList.push_back(alegg.getName());
+        while (getline (myfile, myTopping)) {
+            myList.push_back(myTopping);
         }
         myfile.close();
     }
     return myList;
 }
-/*
-void Database::getaleggformypizza(int myChoice){
-    for (int i = 0; i < aleggs.size(); i++){
-        if (aleggs[i].getName() == myChoice){
-            cout << aleggs[i] << endl;
-        }
-    }
-}
-*/
 
 
 int Database::getPizzaPriceBySizeID(int mySize){
@@ -164,6 +180,48 @@ int Database::getPizzaPriceBySizeID(int mySize){
 
     return verd;
 }
+
+string Database::getAleggByID(int id){
+    id = id - 1;
+    string myTopping;
+    string line;
+    ifstream myfile ("alegg.txt");
+    if (myfile.is_open())
+    {
+        int i = 0;
+        while (getline (myfile, line)) {
+            if (i == id) {
+                myTopping = line;
+            }
+            i++;
+        }
+        myfile.close();
+    }
+    return myTopping;
+}
+
+/*
+vector<Alegg> Database::getAleggByID(int myID){
+    Alegg alegg;
+
+    ifstream fin;
+    fin.open("alegg.txt");
+    if (fin.is_open()){
+        while (fin >> alegg){
+                aleggs.push_back(alegg);
+
+        }
+        fin.close();
+    }
+    for (unsigned int i = 0; i < myID; i++){
+        if(i == myID){
+            return aleggs;
+        }
+    }
+}
+*/
+
+
 
 void Database::addPizzaSize(string name, int price) {
     ofstream fout;

@@ -111,12 +111,14 @@ void AdminMenuController::createAlegg()
 
 void AdminMenuController::createPizzaToMenu()
 {
-    int price = 0;
+    int totalpizzaprice = 0;
 
     cout << "Name: ";
     string name;
     cin >> name;
     cout << endl;
+
+
     vector<string>  allPizzaSizes = db.getAllPizzaSizesOnDatabase();
     displayAllPizzaSizes(allPizzaSizes);
     cout << "Size: ";
@@ -124,28 +126,27 @@ void AdminMenuController::createPizzaToMenu()
     cin >> mySize;
     cout << endl;
 
-    //vector<string> allToppings = db.getAllToppingsOnDatabase();
-    vector<string> allToppings = db.getAllPizzaSizesOnDatabase();
+
+    vector<string> allToppings = db.getAllToppingsOnDatabase();
     displayAllToppings(allToppings);
     cout << "Hversu morg alegg ma bjoda ther: ";
     int toppingcount;
     cin >> toppingcount;
 
-    vector <string> listmyalegg;
-    string alegg;
+
+    vector <string> myAlegg;
+    int aleggChoice;
+
+
     for (int i = 0; i < toppingcount; i++){
-            cin >> alegg;
-            for(int i = 0; i < listmyalegg.size(); i++){
-               listmyalegg.push_back(alegg);
-            }
-    }
-    for (int i = 0; i < listmyalegg.size(); i++){
-        //cout << listmyalegg[i] << endl;
+            cin >> aleggChoice;
+            cout << "Thu valdir " << db.getAleggByID(aleggChoice) << endl;
     }
 
-    price += db.getPizzaPriceBySizeID(mySize);
+    int sizeprice = db.getPizzaPriceBySizeID(mySize);
+    totalpizzaprice = sizeprice + ((toppingcount * 50) * (sizeprice/500));
 
-    cout << "Pizzan kostar: " << price;
+    cout << "Pizzan kostar: " << totalpizzaprice;
 
     getch();
 

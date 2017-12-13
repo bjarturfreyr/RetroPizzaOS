@@ -21,7 +21,11 @@ class Database {
     void addSize(string);
     vector<string> getAllPizzaSizesOnDatabase();
     vector<string> getAllToppingsOnDatabase();
+
+    string getPizzaSizeByID(int id);
     int getPizzaPriceBySizeID(int mySize);
+    string getAleggByID(int id);
+
     vector<string> displayToppingList();
     void getaleggformypizza(int myChoice);
     void addPizzaSize(string name, int price);
@@ -29,31 +33,10 @@ class Database {
     void addAfhendingarstadir(string name);
     void addMedlaeti(string name, int price);
 
-
-    //afhending
-    void addPizzaToKopavogur(const Pizza& pizza);
-    vector<Pizza> getAllPizzasFromKopavogur();
-
-    void hfjorder(const Pizza& pizza);
-    void hfjmenu();
-
-    void vsborder(const Pizza& pizza);
-    void vsbmenu();
-
-    void grafarvogurorder(const Pizza& pizza);
-    void grafarvogurmenu();
-
-    void selfossorder(const Pizza& pizza);
-    void selfossmenu();
-
     private:
     //afhending
-    vector<Pizza> kopavogur;
-    vector<Pizza> hfj;
-    vector<Pizza> vsb;
-    vector<Pizza> grafarvogur;
-    vector<Pizza> selfoss;
     vector<Alegg> aleggs;
+
 };
 
 #endif // DATABASE_H
