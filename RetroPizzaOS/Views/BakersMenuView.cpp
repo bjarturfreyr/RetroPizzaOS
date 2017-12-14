@@ -25,13 +25,13 @@ void BakersMenuView::displayBakersNavigation(){
     cout << "' til ad fa upp lista af pontudum pizzum." << endl;
 
 
-    setColor(15);
+    /*setColor(15);
     cout << "Veldu '";
     setColor(11);
     cout << "s";
     setColor(15);
     cout << "' til ad fa upp tiltekna pantada pizzu." << endl;
-
+*/
 
     cout << "Veldu '";
     setColor(6);

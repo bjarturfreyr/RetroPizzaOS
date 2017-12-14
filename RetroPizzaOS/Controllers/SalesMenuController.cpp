@@ -18,30 +18,39 @@ void SalesMenuController::init()
         sign();
         cin >> selection;
 
-
-
-
         if (selection == 's') {
             char answer;
             homeorget();
             do{
                 displaySalesWhatYouWannaDo();
                 char whatyouwant;
+                do{
+                    sign();
+                    cin >> whatyouwant;
+                    if(whatyouwant == 'm'){
+                        //db.getListOfPizzasOnMenu();
+                        //getch();
+                        cout << endl;
+                        //openMenu();
+                    }
+                    else if(whatyouwant == 'b'){
+
+                        createPizzaForUser();
+                        cout << endl;
+
+                    }
+                    else if (whatyouwant == 'a'){
+                        ///Fá upp lista af meðlæti
+
+                    }
+                    else{
+                        cout << "Rangt inntak! Veldu aftur: " << endl;
+                    }
+
+                }while(whatyouwant != 'm' && whatyouwant != 'b' && whatyouwant != 'a');
+                addToOrder();
                 sign();
-                cin >> whatyouwant;
-
-                if(whatyouwant == 'm'){
-                    //db.getListOfPizzasOnMenu();
-                    getch();
-                    //openMenu();
-                }
-                else if(whatyouwant == 'b'){
-
-                    createPizzaForUser();
-                    cout << endl;
-                    cout << "Ma bjoda der ad baeta vid pontunina? (j) = ja, (n) = nei" << endl;
-                    cin >> answer;
-                }
+                cin >> answer;
             }while(answer == 'j');
         }
 
@@ -66,8 +75,6 @@ void SalesMenuController::homeorget(){
 
     int saekjasott;
     displayHomeOrGet();
-    cout << "Ma bjoda ther ad saekja = 1 eda fa sent heim = 2?" << endl;
-    cout << "Veldu numer: ";
     sign();
     cin >> saekjasott;
     if(saekjasott == 1){

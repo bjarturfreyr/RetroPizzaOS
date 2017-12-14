@@ -29,32 +29,33 @@ void BakersMenuController::init()
             cin >> get;
         }
 
-        else if(input == 'b')
+        else if (input == 'b')
         {
-            //fá upp lista af pontuðum pizzum a þessum stað
-        }
-
-        else if (input == 's')
-        {
-            //fá upp tiltekna pantaða pizzu
+            // fa aftur upp lista af öllum pontudum pizzum
+            int pizzatobake;
+            cout << "Hvada pizzu aetlar thu ad baka: ";
+            sign();
+            cin >> pizzatobake;
+            ///hér er búið að velja eina pizzu af listanum og hann faer tha pizzu upp og bakar hana(ath þessi pizza þarf ad eydast af listanum
         }
 
         else if (input == 'n')
         {
             int val;
             do{
-                cout << "Smelltu á 1 þegar pizzan er i vinnslu, smelltu a 2 þegar pizzan er tilbuin." << endl;
+                cout << "Smelltu á 1 thegar pizzan er i vinnslu, smelltu a 2 thegar pizzan er tilbuin." << endl;
                 sign();
                 cin >> val;
                 if(val == 1){
-                    cout << "Pizzan er nu i vinnslu" << endl;
+                    cout << "Pizzan er nu i vinnslu!" << endl;
 
                 }
                 if(val == 2){
-                    cout << "Pizzan er nu tilbuin" << endl;
+                    cout << "Pizzan er nu tilbuin!" << endl;
                 }
+                ///tilbúnar pizzur þurfa að fara í textaskrá
                 else{
-                    cout << "Rangt inntak" << endl;
+                    cout << "Rangt inntak!" << endl;
                 }
             }while(val != 1 && val != 2);
         }
