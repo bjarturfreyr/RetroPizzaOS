@@ -45,7 +45,7 @@ void AdminMenuController::init()
             clearScreen();
             vector<Pizza> listOfPizzasOnMenu = this->db.getListOfPizzasOnMenu();
             displayMenu(listOfPizzasOnMenu);
-            getch(); //Press any key to continue..
+            pressAnyKeyToContinue();
         }
 
         else if(input == 't')
@@ -71,7 +71,7 @@ void AdminMenuController::createMedlaeti() {
     db.addMedlaeti(name, price);
 
     cout << "Thu baettir vid medlaeti med nafninu " << name << " og verdinu " << price << endl;
-    getch();
+    pressAnyKeyToContinue();
 }
 
 void AdminMenuController::createAfhendingarstadur()
@@ -82,7 +82,7 @@ void AdminMenuController::createAfhendingarstadur()
     db.addAfhendingarstadir(name);
 
     cout << "Thu baettir vid afhendingarstad med nafninu " << name << endl;
-    getch();
+    pressAnyKeyToContinue();
 }
 
 void AdminMenuController::createPizzaSize()
@@ -96,7 +96,7 @@ void AdminMenuController::createPizzaSize()
     db.addPizzaSize(name, price);
 
     cout << "Thu baettir vid pizzu med nafninu " << name << " og verdinu " << price << endl;
-    getch();
+    pressAnyKeyToContinue();
 }
 
 void AdminMenuController::createAlegg()
@@ -107,7 +107,7 @@ void AdminMenuController::createAlegg()
     db.addAlegg(name);
 
     cout << "Thu baettir vid alegg med nafninu " << name << endl;
-    getch();
+    pressAnyKeyToContinue();
 }
 
 void AdminMenuController::createPizzaToMenu()
@@ -160,7 +160,7 @@ void AdminMenuController::createPizzaToMenu()
 
     db.addPizzaToMenu(pizza);
 
-    getch();
+    pressAnyKeyToContinue();
 }
 
 void AdminMenuController::addaleggtomenu(int toppingcount){

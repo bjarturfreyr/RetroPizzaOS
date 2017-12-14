@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "GlobalHelpers.h"
+#include "Pizza.h"
 
 using namespace std;
 using namespace GlobalHelpers;
@@ -11,6 +12,7 @@ using namespace GlobalHelpers;
 namespace GlobalView
 {
     void displayHeader();
+    void displayMenu(vector<Pizza> listOfPizzas);
 };
 
 #endif // GLOBALVIEW_H

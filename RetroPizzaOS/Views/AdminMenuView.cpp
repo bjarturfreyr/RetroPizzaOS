@@ -79,6 +79,8 @@ void AdminMenuView::displayAddedPizza(Pizza pizza){
     }
 }
 
+/*
+
 void AdminMenuView::displayAdminPizzaList(vector<Pizza> listOfPizzasOnMenu) {
     cout << "Allar pizzur a matsedli:" << endl << endl;
     for(unsigned int i = 0; i < listOfPizzasOnMenu.size(); i++){
@@ -90,6 +92,7 @@ void AdminMenuView::displayAdminPizzaList(vector<Pizza> listOfPizzasOnMenu) {
      }
     cout << "Yttu a einhvern takka til ad halda afram..";
 }
+*/
 
 
 void AdminMenuView::displayAllPizzaSizes(vector<string> listOfPizzaSizes)
@@ -103,17 +106,5 @@ void AdminMenuView::displayAllToppings(vector<string> listOfToppings)
 {
     for(int i = 0; i < listOfToppings.size(); i++){
         cout << i+1 << ": " << listOfToppings[i] << endl;
-    }
-}
-
-void AdminMenuView::displayMenu(vector<Pizza> listOfPizzas)
-{
-    for(int i = 0; i < listOfPizzas.size(); i++){
-        cout << "------------------" << endl;
-        cout << "Pizza " << i+1 << ": " << listOfPizzas[i].getNafn() << endl;
-        cout << "Verd" << ": " << listOfPizzas[i].getVerd() << endl;
-        for(int j = 0; j < listOfPizzas[i].getAlegg().size(); j++) {
-            cout << listOfPizzas[i].getAlegg()[j] << endl;
-        }
     }
 }

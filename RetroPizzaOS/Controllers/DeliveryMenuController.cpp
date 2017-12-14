@@ -14,7 +14,7 @@ void DeliveryMenuController::veljaAfhendingarstad(){
     cout << "Vinsamlegast veldu afhendingarstad." << endl;
     sign();
     cin >> afhendingarstadur;
-    getch();
+    pressAnyKeyToContinue();
 }
 
 void DeliveryMenuController::init(){
@@ -35,8 +35,7 @@ void DeliveryMenuController::init(){
         else if(input == 'p'){
             cout << "Her er listi med ollum pontudum pizzum: " << endl;
             ///Fá upp pantanir á afhendingarstað listi frá sölumanni
-            cout << "Yttu a hvada takka sem er til ad fara til baka.. ";
-            getch();
+            pressAnyKeyToContinue();
         }
 
         else if(input == 'b') {

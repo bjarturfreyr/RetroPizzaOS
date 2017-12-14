@@ -199,29 +199,6 @@ string Database::getAleggByID(int id){
     return myTopping;
 }
 
-/*
-vector<Alegg> Database::getAleggByID(int myID){
-    Alegg alegg;
-
-    ifstream fin;
-    fin.open("alegg.txt");
-    if (fin.is_open()){
-        while (fin >> alegg){
-                aleggs.push_back(alegg);
-
-        }
-        fin.close();
-    }
-    for (unsigned int i = 0; i < myID; i++){
-        if(i == myID){
-            return aleggs;
-        }
-    }
-}
-*/
-
-
-
 void Database::addPizzaSize(string name, int price) {
     ofstream fout;
     fout.open("staerdir.txt", ios::app);

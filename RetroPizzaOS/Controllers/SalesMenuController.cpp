@@ -29,7 +29,7 @@ void SalesMenuController::init()
                     cin >> whatyouwant;
                     if(whatyouwant == 'm'){
                         //db.getListOfPizzasOnMenu();
-                        //getch();
+                        //pressAnyKeyToContinue();
                         cout << endl;
                         //openMenu();
                     }
@@ -134,7 +134,7 @@ void SalesMenuController::createPizzaForUser()
 
     cout << "Pizzan kostar: " << totalpizzaprice;
 
-    getch();
+    pressAnyKeyToContinue();
 }
 
 /*

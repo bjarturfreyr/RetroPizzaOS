@@ -12,3 +12,9 @@ void GlobalHelpers::sign()
 {
     cout << "-> ";
 }
+
+void GlobalHelpers::pressAnyKeyToContinue()
+{
+    cout << endl << "Press any key to continue..";
+    getch();
+}

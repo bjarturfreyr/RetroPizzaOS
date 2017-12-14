@@ -16,7 +16,6 @@ namespace AdminMenuView{
     void displayAddedPizza(Pizza pizza);
     void displayAllPizzaSizes(vector<string> listOfPizzaSizes);
     void displayAllToppings(vector<string> listOfToppings);
-    void displayMenu(vector<Pizza> listOfPizzas);
 }
 
 #endif // ADMINMENUVIEW_H

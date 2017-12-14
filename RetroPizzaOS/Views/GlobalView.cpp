@@ -22,5 +22,17 @@ void GlobalView::displayHeader()
     cout << "  ,'_;-'' " << endl;
     cout << " ,,~ " << endl;
     cout << " i' " << endl;
-    cout << " : " << endl;
+}
+
+void GlobalView::displayMenu(vector<Pizza> listOfPizzas)
+{
+    for(int i = 0; i < listOfPizzas.size(); i++){
+        cout << "------------------" << endl;
+        cout << "Pizza " << i+1 << ": " << listOfPizzas[i].getNafn() << endl;
+        cout << "Verd" << ": " << listOfPizzas[i].getVerd() << endl;
+        for(int j = 0; j < listOfPizzas[i].getAlegg().size(); j++) {
+            cout << listOfPizzas[i].getAlegg()[j] << endl;
+        }
+    }
+    cout << "------------------" << endl;
 }
