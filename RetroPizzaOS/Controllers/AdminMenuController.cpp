@@ -43,8 +43,8 @@ void AdminMenuController::init()
         else if(input == 'l')
         {
             clearScreen();
-            //vector<Pizza> listOfPizzasOnMenu = this->db.getListOfPizzasOnMenu();
-            //displayAdminPizzaList(listOfPizzasOnMenu);
+            vector<Pizza> listOfPizzasOnMenu = this->db.getListOfPizzasOnMenu();
+            displayMenu(listOfPizzasOnMenu);
             getch(); //Press any key to continue..
         }
 

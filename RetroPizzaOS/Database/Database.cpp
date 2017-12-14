@@ -12,23 +12,47 @@ void Database::addPizzaToMenu(const Pizza& pizza) {
     }
 }
 
-/*vector<Pizza> Database::getListOfPizzasOnMenu(){
-    vector<string>;
+vector<Pizza> Database::getListOfPizzasOnMenu(){
+    Pizza pizza;
+    vector<Pizza> myList;
     string mymenu;
+    int verd;
+
     ifstream myfile("menu.txt");
     if (myfile.is_open()){
-       while(getline(myfile, mymenu)){
-        myList.push_back(mymenu);
-       }
-    myfile.close();
+        int i = 0;
+        while(getline(myfile, mymenu)){
+            if (i == 0) {
+                pizza.setName(mymenu);
+            }
+
+            else if (i == 1) {
+                verd = atoi(mymenu.c_str());
+                pizza.setVerd(verd);
+            }
+
+            else if (i == 2) {
+                //https://stackoverflow.com/questions/5607589/right-way-to-split-an-stdstring-into-a-vectorstring
+                stringstream ss(mymenu);
+                istream_iterator<string> begin(ss);
+                istream_iterator<string> end;
+                vector<string> myalegg(begin, end);
+                pizza.setAlegg(myalegg);
+
+                myList.push_back(pizza);
+                i = -1;
+            }
+            i++;
+        }
+        myfile.close();
     }
+
     else {
         cout << "Gat ekki lesid skra! " << endl;
     }
+
     return myList;
 }
-
-*/
 
 
 vector<string> Database::getAllAfhendingarstadirOnDatabase() {

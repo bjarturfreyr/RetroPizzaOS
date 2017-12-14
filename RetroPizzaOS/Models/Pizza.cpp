@@ -43,7 +43,6 @@ ofstream& operator << (ofstream& out, const Pizza& pizza){
     out << endl << pizza.nafn << endl;
     out << pizza.verd << endl;
 
-
     for (int i = 0; i < pizza.alegg.size(); i++) {
         out << pizza.alegg[i] << " ";
     }
@@ -53,15 +52,15 @@ ofstream& operator << (ofstream& out, const Pizza& pizza){
 
 ifstream& operator >> (ifstream& in, Pizza& pizza){
     in >> pizza.nafn;
-    in >> pizza.aleggsFjoldi;
     in >> pizza.verd;
-    //in >> pizza.alegg;
+
     /*
-    for(int i = 0; i < pizza.aleggsFjoldi; i++){
+    for(int i = 0; i < pizza.alegg.size(); i++){
         Alegg a;
         in >> a;
         pizza.alegg.push_back(a);
     }
     */
+
     return in;
 }

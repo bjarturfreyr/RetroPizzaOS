@@ -8,6 +8,8 @@
 #include <vector>
 #include <cstddef>
 #include <stdlib.h>
+#include <sstream>
+#include <iterator>
 
 using namespace std;
 
@@ -23,10 +25,10 @@ class Database {
     vector<string> getAllToppingsOnDatabase();
 
 
-
     string getPizzaSizeByID(int id);
     int getPizzaPriceBySizeID(int mySize);
     string getAleggByID(int id);
+
 
     vector<string> displayToppingList();
     void getaleggformypizza(int myChoice);
