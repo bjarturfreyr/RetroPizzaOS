@@ -12,49 +12,24 @@ void Database::addPizzaToMenu(const Pizza& pizza) {
     }
 }
 
-vector<Pizza> Database::getListOfPizzasOnMenu(){
-    vector<Pizza> listOfPizzasOnMenu;
-    ifstream fin;
-    fin.open("menu.txt");
-    if (fin.is_open()){
-        Pizza pizza;
-        while (fin >> pizza){
-            listOfPizzasOnMenu.push_back(pizza);
-        }
-        fin.close();
+/*vector<Pizza> Database::getListOfPizzasOnMenu(){
+    vector<string>;
+    string mymenu;
+    ifstream myfile("menu.txt");
+    if (myfile.is_open()){
+       while(getline(myfile, mymenu)){
+        myList.push_back(mymenu);
+       }
+    myfile.close();
     }
     else {
-        cout << "Unable to read from file! " << endl;
+        cout << "Gat ekki lesid skra! " << endl;
     }
-    return listOfPizzasOnMenu;
+    return myList;
 }
 
-/*
-string Database::listPizzas() {
-
-    string pizzalist;
-    string line;
-    ifstream myfile ("menu.txt");
-    if (myfile.is_open())
-    {
-        while (getline (myfile,line))
-        {
-            pizzalist = pizzalist + line + "\n";
-        }
-        myfile.close();
-    }
-
-    return pizzalist;
-}
 */
 
-/*void Database::addPizza(string nafn, int aleggID) {
-    ofstream myfile;
-    myfile.open ("menu.txt", ios::app);
-    myfile << endl << nafn << endl << aleggID;
-    myfile.close();
-}
-*/
 
 vector<string> Database::getAllAfhendingarstadirOnDatabase() {
     vector<string> myList;

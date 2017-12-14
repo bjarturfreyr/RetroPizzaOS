@@ -7,7 +7,7 @@ void SalesMenuView::displaySalesWelcome()
     setColor(11);
     cout << "solumann";
     setColor(15);
-    cout << " menu." << endl << endl;
+    cout << " felagi." << endl << endl;
 }
 
 void SalesMenuView::displaySalesNavigation()
@@ -51,8 +51,18 @@ void SalesMenuView::displaySalesNavigation()
 
 void SalesMenuView::displaySalesWhatYouWannaDo()
 {
-    cout << "Veldu 'm' til ad fa upp lista af matsedli" << endl;
-    cout << "Veldu 'b' til ad bua til dina eigin pizzu" << endl;
+    setColor(15);
+    cout << "Veldu '";
+    setColor(3);
+    cout << "m";
+    setColor(15);
+    cout << "' til ad fa upp lista af matsedli." << endl;
+
+    cout << "Veldu '";
+    setColor(14);
+    cout << "b";
+    setColor(15);
+    cout << "' til ad bua til dina eigin pizzu." << endl;
 }
 
 void SalesMenuView::displaySalesSize()
@@ -75,6 +85,20 @@ void SalesMenuView::velja_size(char size){
         cout << "Rangt inntak! Reyndu aftur! " << endl;
     }
     cout << endl;
+}
+
+void SalesMenuView::displayHomeOrGet()
+{
+    setColor(15);
+    cout << "Hvort ma bjoda der ad saekja = '";
+    setColor(2);
+    cout << "1";
+    setColor(15);
+    cout << "' eda fa sent heim = '." << endl;
+    setColor(13);
+    cout << "2";
+    setColor(15);
+    cout << "'?" << endl;
 }
 
 

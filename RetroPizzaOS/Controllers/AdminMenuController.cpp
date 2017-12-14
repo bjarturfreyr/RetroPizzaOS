@@ -16,6 +16,7 @@ void AdminMenuController::init()
         displayAdminWelcome();
         displayAdminNavigation();
 
+        sign();
         cin >> input;
 
 
@@ -42,8 +43,8 @@ void AdminMenuController::init()
         else if(input == 'l')
         {
             clearScreen();
-            vector<Pizza> listOfPizzasOnMenu = this->db.getListOfPizzasOnMenu();
-            displayAdminPizzaList(listOfPizzasOnMenu);
+            //vector<Pizza> listOfPizzasOnMenu = this->db.getListOfPizzasOnMenu();
+            //displayAdminPizzaList(listOfPizzasOnMenu);
             getch(); //Press any key to continue..
         }
 
@@ -139,6 +140,7 @@ void AdminMenuController::createPizzaToMenu()
 
 
     for (int i = 0; i < toppingcount; i++){
+            cout << "Alegg " << i+1 << ": ";
             cin >> aleggChoice;
             string alegg = db.getAleggByID(aleggChoice);
             cout << "Thu valdir " << alegg << endl;

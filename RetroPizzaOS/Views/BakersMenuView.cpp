@@ -6,7 +6,7 @@ void BakersMenuView::displayBakersWelcome(){
     setColor(14);
     cout << "bakara";
     setColor(15);
-    cout << " menu." << endl << endl;
+    cout << " felagi." << endl << endl;
 }
 
 void BakersMenuView::displayBakersNavigation(){

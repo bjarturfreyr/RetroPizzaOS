@@ -15,6 +15,7 @@ namespace SalesMenuView{
     void displaySalesPizzalist();
     void displaySalesSize();
     void displaySalesWhatYouWannaDo();
+    void displayHomeOrGet();
 
     void addToOrder();
 

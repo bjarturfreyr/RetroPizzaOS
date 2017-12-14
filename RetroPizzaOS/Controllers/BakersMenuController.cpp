@@ -15,11 +15,18 @@ void BakersMenuController::init()
         displayBakersWelcome();
         displayBakersNavigation();
 
+        sign();
         cin >> input;
 
         if(input == 'a')
         {
-            //velja afhendingarstad
+            cout << "Veldu stadsetningu: "<< endl;
+            //setja í fall
+            vector<string> allafhendingarstadir = db.getAllAfhendingarstadirOnDatabase();
+            displayAllAfhendingarstadir(allafhendingarstadir);
+            cout << "Afhendingarstadur: ";
+            int get;
+            cin >> get;
         }
 
         else if(input == 'b')
@@ -34,7 +41,22 @@ void BakersMenuController::init()
 
         else if (input == 'n')
         {
-            //merkja pizzu greidda eda afhenta
+            int val;
+            do{
+                cout << "Smelltu á 1 þegar pizzan er i vinnslu, smelltu a 2 þegar pizzan er tilbuin." << endl;
+                sign();
+                cin >> val;
+                if(val == 1){
+                    cout << "Pizzan er nu i vinnslu" << endl;
+
+                }
+                if(val == 2){
+                    cout << "Pizzan er nu tilbuin" << endl;
+                }
+                else{
+                    cout << "Rangt inntak" << endl;
+                }
+            }while(val != 1 && val != 2);
         }
 
         else if(input == 't')

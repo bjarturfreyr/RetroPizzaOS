@@ -11,7 +11,8 @@ DeliveryMenuController::DeliveryMenuController(Database db)
 void DeliveryMenuController::veljaAfhendingarstad(){
     vector<string> allAfhendingarstadir = db.getAllAfhendingarstadirOnDatabase();
     displayAllAfhendingarstadir(allAfhendingarstadir);
-    cout << "Vinsamlegast veldu afhendingarstad" << endl;
+    cout << "Vinsamlegast veldu afhendingarstad." << endl;
+    sign();
     cin >> afhendingarstadur;
     getch();
 }
@@ -24,6 +25,7 @@ void DeliveryMenuController::init(){
         displayDeliveryWelcome1();
         displayDeliveryNavigation1();
 
+        sign();
         cin >> input;
 
         if(input == 'a'){
@@ -43,7 +45,23 @@ void DeliveryMenuController::init(){
         }
 
         else if (input == 'm') {
-            //merkja pontun greidda eda afhenta
+            int val;
+            do{
+                cout << "Veldu 1 ef pizzan hefur verid greidd" << endl;
+                cout  << "Veldu 2 ef pizzan hefur verid afhent" << endl;
+                sign();
+                cin >> val;
+
+                if (val == 1){
+                    cout << "Pizzan hefur verid greidd og er nu tilbuin til afhendingar!" << endl;
+                }
+                if (val == 2){
+                    cout << "Pizzan hefur verid afhent!" << endl;
+                }
+                else {
+                    cout << "Rangt inntak!" << endl;
+                }
+            }while(val != 1 && val != 2);
         }
 
         else if(input == 't'){

@@ -15,6 +15,7 @@ void MainMenuController::init(){
         displayHeader();
         displayMenuNavigation(); //Kallar í MainMenuView
 
+        sign();
         cin >> selection; //Controllerin sem við erum í sér um að taka inn input.
 
     }

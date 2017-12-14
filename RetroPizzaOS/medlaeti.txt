@@ -8,3 +8,5 @@ bla
 300
 sukkuladi
 300
+Braudstangir
+900

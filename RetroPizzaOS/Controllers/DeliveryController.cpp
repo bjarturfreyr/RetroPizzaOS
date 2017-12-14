@@ -15,6 +15,7 @@ void DeliveryController::init()
         //displayDeliveryWelcome();
         //displayDeliveryNavigation();
 
+        sign();
         cin >> selection;
     }
 

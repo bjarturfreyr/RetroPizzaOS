@@ -18,11 +18,13 @@ class SalesMenuController
         SalesMenuController();
         void homeorget();
         void displayAllAfhendingarstadir(vector<string>listOfAfhendingarstadir);
-
+        //void openMenu();
+      //  void displayAllPizzasOnMenu(vector<Pizza>listOfPizzasOnMenu);
     private:
         void init();
         void createPizzaForUser();
         Database db;
+
 };
 
 #endif // SALESMENUCONTROLLER_H

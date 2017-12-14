@@ -6,7 +6,7 @@ void DeliveryMenuView::displayDeliveryWelcome1(){
     setColor(5);
     cout << "afhending";
     setColor(15);
-    cout << " menu." << endl << endl;
+    cout << " felagi." << endl << endl;
 }
 
 void DeliveryMenuView::displayDeliveryNavigation1(){
@@ -33,17 +33,17 @@ void DeliveryMenuView::displayDeliveryNavigation1(){
 
 
     cout << "Veldu '";
-    setColor(3);
-    cout << "m";
-    setColor(15);
-    cout << "' til ad merkja pontun greidda eda afhenta." << endl;
-
-
-    cout << "Veldu '";
     setColor(12);
     cout << "u";
     setColor(15);
     cout << "' til ad fa upp tiltekna pontun." << endl;
+
+
+    cout << "Veldu '";
+    setColor(3);
+    cout << "m";
+    setColor(15);
+    cout << "' til ad merkja pontun greidda eda afhenta." << endl;
 
 
     cout << "Veldu '";

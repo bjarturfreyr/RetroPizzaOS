@@ -30,6 +30,7 @@ class AdminMenuController
         void createMedlaeti();
         void addaleggtomenu(int numberoftoppings);
         Database db;
+
 };
 
 #endif // ADMINMENUCONTROLLER_H

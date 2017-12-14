@@ -7,3 +7,8 @@ void GlobalHelpers::clearScreen(){
 void GlobalHelpers::setColor(int color){
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
+
+void GlobalHelpers::sign()
+{
+    cout << "-> ";
+}

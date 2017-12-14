@@ -22,6 +22,8 @@ class Database {
     vector<string> getAllPizzaSizesOnDatabase();
     vector<string> getAllToppingsOnDatabase();
 
+
+
     string getPizzaSizeByID(int id);
     int getPizzaPriceBySizeID(int mySize);
     string getAleggByID(int id);

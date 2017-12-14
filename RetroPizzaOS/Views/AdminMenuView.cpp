@@ -6,7 +6,7 @@ void AdminMenuView::displayAdminWelcome(){
     setColor(12);
     cout << "umsjon";
     setColor(15);
-    cout << " menu." << endl << endl;
+    cout << " felagi." << endl << endl;
 }
 
 void AdminMenuView::displayAdminNavigation(){
@@ -69,7 +69,7 @@ void AdminMenuView::displayAdminNavigation(){
 }
 
 void AdminMenuView::displayAddedPizza(Pizza pizza){
-    cout << "You added this pizza to the menu:" << endl;
+    cout << "Thu hefur baett dessari pizzu vid matsedilinn:" << endl;
     cout << pizza.getNafn() << endl;
     cout << pizza.getVerd() << endl;\
     for(int i = 0; i < pizza.getAlegg().size(); i++){
@@ -84,11 +84,11 @@ void AdminMenuView::displayAdminPizzaList(vector<Pizza> listOfPizzasOnMenu) {
     for(unsigned int i = 0; i < listOfPizzasOnMenu.size(); i++){
         cout << "Pizza nr." << i+1 << "\t" << listOfPizzasOnMenu[i].getNafn() << "\tPrice: " << listOfPizzasOnMenu[i].getVerd() << endl;
         for(unsigned int j = 0; j < listOfPizzasOnMenu[i].getAlegg().size(); j++){
-            cout << "Alegg nr." << j+1 << "\t" << listOfPizzasOnMenu[i].getAlegg().at(j).getName() << endl;
+//            cout << "Alegg nr." << j+1 << "\t" << listOfPizzasOnMenu[i].getAlegg().at(j).getName() << endl;
         }
         cout << endl << endl;
      }
-    cout << "Press any key to continue..";
+    cout << "Yttu a einhvern takka til ad halda afram..";
 }
 
 
