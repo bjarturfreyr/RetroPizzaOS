@@ -7,7 +7,7 @@ void Database::addPizzaToMenu(const Pizza& pizza) {
     ofstream fout;
     fout.open("menu.txt", ios::app);
     if(fout.is_open()){
-      fout << pizza;
+        fout << pizza;
         fout.close();
     }
 }
@@ -73,6 +73,29 @@ vector<string> Database::getAllAfhendingarstadirOnDatabase() {
     return myList;
 }
 
+string Database::getAfhendingarstadurByID(int id) {
+    id = id - 1;
+    string line;
+    string myAfhendingarstadur;
+
+    ifstream myfile ("afhendingarstadir.txt");
+    if (myfile.is_open())
+    {
+        int i = 0;
+        while(getline(myfile, line))
+        {
+            if (id == i)
+            {
+                myAfhendingarstadur = line;
+            }
+            i++;
+        }
+        myfile.close();
+    }
+
+    return myAfhendingarstadur;
+}
+
 void Database::addSize(string staerd) {
     ofstream myfile;
     myfile.open ("staerdir.txt", ios::app);
@@ -90,6 +113,45 @@ void Database::addPizzaToUnbakedListInStoreLocation(Pizza pizza, string storeLoc
         fout << pizza;
         fout.close();
     }
+}
+
+void Database::addOrderToSpecificPlace(vector<Pizza> pizzas, vector<Medlaeti> medlatis, string athugasemd, int afhendingarstadurinn, bool sent, bool greitt)
+{
+    string storelocation = getAfhendingarstadurByID(afhendingarstadurinn) + ".txt";
+    ofstream myfile;
+    myfile.open(storelocation.c_str(), ios::app);
+
+    //lesa inn pizzur
+    for(int i = 0; i < pizzas.size(); i++)
+    {
+        myfile << pizzas[i];
+    }
+
+    //lesa inn medlaeti
+    for(int i = 0; i < medlatis.size(); i++)
+    {
+        myfile << "\n" << medlatis[i].getName();
+        myfile << "\n" << medlatis[i].getPrice();
+    }
+
+    //lesa inn sent eða sótt
+    if (sent == false) {
+        myfile << "\n" << "Sótt";
+    }
+    else {
+        myfile << "\n" << "Sent";
+    }
+
+    //lesa inn athugasemd
+    myfile << "\n" << athugasemd;
+
+    //greitt eða ekki
+    myfile << "\n" << greitt;
+
+    //delimiter
+    myfile << "\n" << ":";
+
+    myfile.close();
 }
 
 vector<string> Database::getAllPizzaSizesOnDatabase()
@@ -224,6 +286,9 @@ void Database::addAfhendingarstadir(string name) {
         fout << "\n" << name;
         fout.close();
     }
+
+    fout.open((name + ".txt").c_str());
+    fout.close();
 }
 
 void Database::addMedlaeti(string name, int price) {
@@ -233,4 +298,39 @@ void Database::addMedlaeti(string name, int price) {
         fout << "\n" << name << "\n" << price;
         fout.close();
     }
+}
+
+vector<Medlaeti> Database::getAllMedlaetiOnDatabase(){
+    Medlaeti medlaeti;
+    vector<Medlaeti> myList;
+
+    string mymenu;
+    int verd;
+
+    ifstream myfile("medlaeti.txt");
+    if (myfile.is_open()){
+        int i = 0;
+        while(getline(myfile, mymenu)){
+            if (i == 0) {
+                medlaeti.setName(mymenu);
+            }
+
+            else if (i == 1) {
+                verd = atoi(mymenu.c_str());
+                medlaeti.setPrice(verd);
+
+                myList.push_back(medlaeti);
+                i = -1;
+            }
+            i++;
+        }
+        myfile.close();
+    }
+
+    else {
+        cout << "Gat ekki lesid skra! " << endl;
+    }
+
+    return myList;
+
 }

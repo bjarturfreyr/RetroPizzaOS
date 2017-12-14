@@ -8,7 +8,11 @@ SalesMenuController::SalesMenuController()
 void SalesMenuController::init()
 {
     char selection;
-
+    vector<Pizza> pizzuripontun;
+    vector<Medlaeti> medlaetiipontun;
+    string athugasemdapontun;
+    int afhendingarstadurapontun;
+    bool sentapontun;
 
     while(selection != 'h'){
         clearScreen();
@@ -19,43 +23,60 @@ void SalesMenuController::init()
         cin >> selection;
 
         if (selection == 's') {
-            char answer;
-            homeorget();
-            do{
-                displaySalesWhatYouWannaDo();
                 char whatyouwant;
                 do{
+                    clearScreen();
+                    displaySalesWhatYouWannaDo();
                     sign();
                     cin >> whatyouwant;
                     if(whatyouwant == 'm'){
-                        //db.getListOfPizzasOnMenu();
-                        //pressAnyKeyToContinue();
-                        cout << endl;
-                        //openMenu();
+                        clearScreen();
+                        vector<Pizza> listOfPizzasOnMenu = this->db.getListOfPizzasOnMenu();
+                        displayMenu(listOfPizzasOnMenu);
+                        pressAnyKeyToContinue();
                     }
                     else if(whatyouwant == 'b'){
 
-                        createPizzaForUser();
-                        cout << endl;
-
+                        pizzuripontun.push_back(createPizzaForUser());
                     }
+
+                    else if(whatyouwant == 'v'){
+                        int whatmedlaeti;
+                        cout << "Vinsamlegast veldu medlaeti." << endl;
+                        sign();
+                        cin >> whatmedlaeti;
+                        medlaetiipontun.push_back(addMedlaetiForUserFromMenu(whatmedlaeti));
+                    }
+
+                    else if(whatyouwant == 'n'){
+                        int whatpizza;
+                        cout << "Vinsamlegast veldu pizzu." << endl;
+                        sign();
+                        cin >> whatpizza;
+                        pizzuripontun.push_back(addPizzaForUserFromMenu(whatpizza));
+                    }
+
                     else if (whatyouwant == 'a'){
-                        ///Fá upp lista af meðlæti
-
+                        clearScreen();
+                        vector<Medlaeti> listOfMedlaetiOnMenu = this->db.getAllMedlaetiOnDatabase();
+                        displayMedlaeti(listOfMedlaetiOnMenu);
+                        pressAnyKeyToContinue();
                     }
+
+                    else if (whatyouwant == 'k'){
+                        //bye
+                    }
+
                     else{
                         cout << "Rangt inntak! Veldu aftur: " << endl;
                     }
 
-                }while(whatyouwant != 'm' && whatyouwant != 'b' && whatyouwant != 'a');
-                addToOrder();
-                sign();
-                cin >> answer;
-            }while(answer == 'j');
-        }
+                }while(whatyouwant != 'k');
 
-        else if (selection == 'b') {
-            //breyta pontun
+            sentapontun = homeorget();
+            afhendingarstadurapontun = veljaAfhendingarstad();
+            athugasemdapontun = addAthugasemd();
+            db.addOrderToSpecificPlace(pizzuripontun,medlaetiipontun,athugasemdapontun,afhendingarstadurapontun,sentapontun,false);
         }
 
         else if (selection == 't') {
@@ -71,25 +92,42 @@ void SalesMenuController::init()
     exit(0);
 }
 
-void SalesMenuController::homeorget(){
+int SalesMenuController::veljaAfhendingarstad(){
+    int choice;
+    cout << "Vinsamlegast veldu afhendingarstad." << endl;
+    vector<string> allafhendingarstadir = db.getAllAfhendingarstadirOnDatabase();
+    displayAllAfhendingarstadir(allafhendingarstadir);
+    sign();
+    cin >> choice;
+    return choice;
+}
 
+bool SalesMenuController::homeorget(){
     int saekjasott;
+    bool sent;
     displayHomeOrGet();
     sign();
     cin >> saekjasott;
+
     if(saekjasott == 1){
-    cout << "Veldu afhendingarstad: " << endl;
-    vector<string> allafhendingarstadir = db.getAllAfhendingarstadirOnDatabase();
-    displayAllAfhendingarstadir(allafhendingarstadir);
-    cout << "Afhendingarstadur numer: ";
-    int get;
-    sign();
-    cin >> get;
-    cout << "Thu hefur valid stadinn " << endl;
+        cout << "Komdu ad na i pizzuna!" << endl;
+        sent = false;
     }
+
     else{
         cout << "Pizzan verdur send heim eftir 10 minutur! " << endl;
+        sent = true;
     }
+
+    return sent;
+}
+
+string SalesMenuController::addAthugasemd()
+{
+    string athugasemd;
+    cout << "Vinsamlegast skrifadu inn athugasemd ef thu hefur serstakar oskir." << endl;
+    cin >> athugasemd;
+    return athugasemd;
 }
 
 void SalesMenuController::displayAllAfhendingarstadir(vector<string>listOfAfhendingarstadir){
@@ -98,23 +136,49 @@ void SalesMenuController::displayAllAfhendingarstadir(vector<string>listOfAfhend
     }
 }
 
+Medlaeti SalesMenuController::addMedlaetiForUserFromMenu(int choice)
+{
+    choice -= 1;
+    Medlaeti mymedlaeti;
+    vector<Medlaeti> menu = db.getAllMedlaetiOnDatabase();
+    mymedlaeti.setName(menu[choice].getName());
+    mymedlaeti.setPrice(menu[choice].getPrice());
+    return mymedlaeti;
+}
 
-void SalesMenuController::createPizzaForUser()
+Pizza SalesMenuController::addPizzaForUserFromMenu(int choice)
+{
+    choice -= 1;
+    Pizza mypizza;
+    vector<Pizza> menu = db.getListOfPizzasOnMenu();
+    mypizza.setName(menu[choice].getNafn());
+    mypizza.setVerd(menu[choice].getVerd());
+    mypizza.setAlegg(menu[choice].getAlegg());
+    return mypizza;
+}
+
+Pizza SalesMenuController::createPizzaForUser()
 {
     int totalpizzaprice = 0;
+
+    cout << "Name: ";
+    string name;
+    cin >> name;
+    cout << endl;
+
+
     vector<string>  allPizzaSizes = db.getAllPizzaSizesOnDatabase();
     displayAllPizzaSizes(allPizzaSizes);
     cout << "Size: ";
     int mySize;
-    sign();
     cin >> mySize;
     cout << endl;
+
 
     vector<string> allToppings = db.getAllToppingsOnDatabase();
     displayAllToppings(allToppings);
     cout << "Hversu morg alegg ma bjoda ther: ";
     int toppingcount;
-    sign();
     cin >> toppingcount;
 
 
@@ -123,10 +187,11 @@ void SalesMenuController::createPizzaForUser()
 
 
     for (int i = 0; i < toppingcount; i++){
-        cout << "Alegg " << i+1 << ": ";
-        sign();
-        cin >> aleggChoice;
-        cout << "Thu valdir " << db.getAleggByID(aleggChoice) << endl;
+            cout << "Alegg " << i+1 << ": ";
+            cin >> aleggChoice;
+            string alegg = db.getAleggByID(aleggChoice);
+            cout << "Thu valdir " << alegg << endl;
+            myAlegg.push_back(alegg);
     }
 
     int sizeprice = db.getPizzaPriceBySizeID(mySize);
@@ -134,23 +199,13 @@ void SalesMenuController::createPizzaForUser()
 
     cout << "Pizzan kostar: " << totalpizzaprice;
 
+    Pizza pizza;
+
+    pizza.setName(name);
+    pizza.setVerd(totalpizzaprice);
+    pizza.setAlegg(myAlegg);
+
     pressAnyKeyToContinue();
-}
 
-/*
-void SalesMenuController::openMenu(){
-    cout  << "Hvada pizzu ma bjoda ther: ";
-    int val;
-    cin >> val;
-    cout << endl;
-    vector <Pizza> allPizzasOnMenu = db.getListOfPizzasOnMenu();
-    displayAllPizzasOnMenu(allPizzasOnMenu);
-
+    return pizza;
 }
-
-void SalesMenuController::displayAllPizzasOnMenu(vector<Pizza>listOfPizzasOnMenu){
-    for (int i = 0; i < listOfPizzasOnMenu.size(); i++){
-//    cout << i+1 << ": " << listOfPizzasOnMenu[i] << endl;
-    }
-}
-*/

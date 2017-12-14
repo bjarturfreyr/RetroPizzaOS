@@ -7,6 +7,7 @@ BakersMenuController::BakersMenuController(Database db)
 
 void BakersMenuController::init()
 {
+    int afhendingarstadur = 0;
     char input;
 
     while(input != 'h')
@@ -25,8 +26,7 @@ void BakersMenuController::init()
             vector<string> allafhendingarstadir = db.getAllAfhendingarstadirOnDatabase();
             displayAllAfhendingarstadir(allafhendingarstadir);
             cout << "Afhendingarstadur: ";
-            int get;
-            cin >> get;
+            cin >> afhendingarstadur;
         }
 
         else if (input == 'b')

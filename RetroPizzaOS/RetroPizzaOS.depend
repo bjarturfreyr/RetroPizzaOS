@@ -625,7 +625,7 @@
 	"Database.h"
 	"GlobalHelpers.h"
 
-1513253797 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\database\database.h
+1513271206 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\database\database.h
 	<iostream>
 	<string>
 	<fstream>
@@ -635,6 +635,8 @@
 	<stdlib.h>
 	<sstream>
 	<iterator>
+	"Medlaeti.h"
+	<conio.h>
 
 1513248969 c:\users\danni\desktop\repositories2\retropizzaos\retropizzaos\database\database.h
 	<iostream>
@@ -709,7 +711,7 @@
 1513084520 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\afhendingmenucontroller.cpp
 	"AfhendingMenuController.h"
 
-1513256398 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\bakersmenucontroller.cpp
+1513259059 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\bakersmenucontroller.cpp
 	"BakersMenuController.h"
 
 1513251762 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\deliverycontroller.cpp
@@ -718,7 +720,7 @@
 1513251762 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\mainmenucontroller.cpp
 	"MainMenuController.h"
 
-1513257609 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\salesmenucontroller.cpp
+1513271093 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\salesmenucontroller.cpp
 	"SalesMenuController.h"
 
 1513257629 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\helpers\globalhelpers.cpp
@@ -751,10 +753,10 @@
 1513251762 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\views\mainmenuview.cpp
 	"MainMenuView.h"
 
-1513256398 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\views\salesmenuview.cpp
+1513261267 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\views\salesmenuview.cpp
 	"SalesMenuView.h"
 
-1513256924 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\database\database.cpp
+1513271093 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\database\database.cpp
 	"Database.h"
 
 1513092748 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\models\medlaeti.cpp
@@ -906,12 +908,13 @@
 	"Database.h"
 	"GlobalHelpers.h"
 
-1513257218 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\views\globalview.h
+1513260909 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\views\globalview.h
 	<iostream>
 	"GlobalHelpers.h"
 	"Pizza.h"
+	"Medlaeti.h"
 
-1513251762 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\salesmenucontroller.h
+1513266626 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\salesmenucontroller.h
 	"AdminMenuView.h"
 	"SalesMenuView.h"
 	"Database.h"
@@ -919,6 +922,8 @@
 	"GlobalHelpers.h"
 	"GlobalView.h"
 	"AfhendingMenuController.h"
+	"Pizza.h"
+	"Medlaeti.h"
 
 1513256398 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\views\salesmenuview.h
 	<iostream>
@@ -931,6 +936,16 @@
 1513257609 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\controllers\deliverymenucontroller.cpp
 	"DeliveryMenuController.h"
 
-1513257705 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\views\globalview.cpp
+1513260877 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\views\globalview.cpp
 	"GlobalView.h"
+
+1513271110 source:c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\models\pantanir.cpp
+	"Pantanir.h"
+
+1513271093 c:\users\bjarturfreyr\desktop\repositories\retropizzaos\retropizzaos\retropizzaos\models\pantanir.h
+	<string>
+	<iostream>
+	<vector>
+	"Pizza.h"
+	"Medlaeti.h"
 

@@ -10,6 +10,8 @@
 #include <stdlib.h>
 #include <sstream>
 #include <iterator>
+#include "Medlaeti.h"
+#include <conio.h>
 
 using namespace std;
 
@@ -17,25 +19,30 @@ class Database {
     public:
     Database();
     vector<Pizza> getListOfPizzasOnMenu();
-    void addPizzaToMenu(const Pizza& pizza);
     vector<string> getAllAfhendingarstadirOnDatabase();
-    void addPizzaToUnbakedListInStoreLocation(Pizza pizza, string storeLocation);
-    void addSize(string);
     vector<string> getAllPizzaSizesOnDatabase();
     vector<string> getAllToppingsOnDatabase();
+    vector<Medlaeti> getAllMedlaetiOnDatabase();
+    void getaleggformypizza(int myChoice);
 
 
     string getPizzaSizeByID(int id);
     int getPizzaPriceBySizeID(int mySize);
     string getAleggByID(int id);
+    string getAfhendingarstadurByID(int id);
 
 
     vector<string> displayToppingList();
-    void getaleggformypizza(int myChoice);
+
+
+    void addPizzaToMenu(const Pizza& pizza);
+    void addPizzaToUnbakedListInStoreLocation(Pizza pizza, string storeLocation);
+    void addSize(string);
     void addPizzaSize(string name, int price);
     void addAlegg(string name);
     void addAfhendingarstadir(string name);
     void addMedlaeti(string name, int price);
+    void addOrderToSpecificPlace(vector<Pizza> pizzas, vector<Medlaeti> medlatis, string athugasemd, int afhendingarstadurinn, bool sent, bool greitt);
 
     private:
     //afhending

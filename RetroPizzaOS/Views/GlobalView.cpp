@@ -36,3 +36,13 @@ void GlobalView::displayMenu(vector<Pizza> listOfPizzas)
     }
     cout << "------------------" << endl;
 }
+
+void GlobalView::displayMedlaeti(vector<Medlaeti> listOfMedlaeti)
+{
+    for(int i = 0; i < listOfMedlaeti.size(); i++) {
+        cout << "------------------" << endl;
+        cout << "Medlaeti: " << i+1 << ": " << listOfMedlaeti[i].getName() << endl;
+        cout << "Verd: " << listOfMedlaeti[i].getPrice() << endl;
+    }
+    cout << "------------------" << endl;
+}

@@ -67,6 +67,8 @@
 		<Unit filename="Models/Alegg.h" />
 		<Unit filename="Models/Medlaeti.cpp" />
 		<Unit filename="Models/Medlaeti.h" />
+		<Unit filename="Models/Pantanir.cpp" />
+		<Unit filename="Models/Pantanir.h" />
 		<Unit filename="Models/Pizza.cpp" />
 		<Unit filename="Models/Pizza.h" />
 		<Unit filename="Views/AdminMenuView.cpp" />

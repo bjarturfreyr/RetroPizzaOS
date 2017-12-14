@@ -8,21 +8,28 @@
 #include "GlobalHelpers.h"
 #include "GlobalView.h"
 #include "AfhendingMenuController.h"
+#include "Pizza.h"
+#include "Medlaeti.h"
 
 
 using namespace SalesMenuView;
+using namespace GlobalView;
 
 class SalesMenuController
 {
     public:
         SalesMenuController();
-        void homeorget();
+        bool homeorget();
         void displayAllAfhendingarstadir(vector<string>listOfAfhendingarstadir);
+        int veljaAfhendingarstad();
+        string addAthugasemd();
         //void openMenu();
-      //  void displayAllPizzasOnMenu(vector<Pizza>listOfPizzasOnMenu);
+        //void displayAllPizzasOnMenu(vector<Pizza>listOfPizzasOnMenu);
     private:
         void init();
-        void createPizzaForUser();
+        Pizza createPizzaForUser();
+        Pizza addPizzaForUserFromMenu(int choice);
+        Medlaeti addMedlaetiForUserFromMenu(int choice);
         Database db;
 
 };
