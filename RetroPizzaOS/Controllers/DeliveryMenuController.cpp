@@ -33,16 +33,21 @@ void DeliveryMenuController::init(){
         }
 
         else if(input == 'p'){
-            //Fá upp pantanir á afhendingarstað
+            cout << "Her er listi med ollum pontudum pizzum: " << endl;
+            ///Fá upp pantanir á afhendingarstað listi frá sölumanni
+            cout << "Yttu a hvada takka sem er til ad fara til baka.. ";
+            getch();
         }
 
         else if(input == 'b') {
-            //fá upp lista af tilbúnum pöntunum
+            ///fá upp lista af tilbúnum pöntunum frá bakara
+            cout << "Hvada pizzu aetlar thu ad afhenda: " << endl;
+            int pizzatilafhendingar;
+            sign();
+            cin >> pizzatilafhendingar;
+            /// þessi pizza eyðist af listanum
         }
 
-        else if (input == 'u') {
-            //fá upp tiltekna pöntun
-        }
 
         else if (input == 'm') {
             int val;

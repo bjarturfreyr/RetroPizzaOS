@@ -63,6 +63,12 @@ void SalesMenuView::displaySalesWhatYouWannaDo()
     cout << "b";
     setColor(15);
     cout << "' til ad bua til dina eigin pizzu." << endl;
+
+    cout << "Veldu '";
+    setColor(9);
+    cout << "a";
+    setColor(15);
+    cout << "' til ad velja medlaeti. " << endl;
 }
 
 void SalesMenuView::displaySalesSize()
@@ -70,7 +76,7 @@ void SalesMenuView::displaySalesSize()
     cout << "Hvada staerd ma bjoda der? " << endl;
 }
 
-void SalesMenuView::velja_size(char size){
+/*void SalesMenuView::velja_size(char size){
 
     if (size == 'S' || size == 's'){
         cout << "Staerd valin -> Stor " << endl;
@@ -87,6 +93,8 @@ void SalesMenuView::velja_size(char size){
     cout << endl;
 }
 
+*/
+
 void SalesMenuView::displayHomeOrGet()
 {
     setColor(15);
@@ -94,7 +102,7 @@ void SalesMenuView::displayHomeOrGet()
     setColor(2);
     cout << "1";
     setColor(15);
-    cout << "' eda fa sent heim = '." << endl;
+    cout << "' eda fa sent heim = '.";
     setColor(13);
     cout << "2";
     setColor(15);
