@@ -8,64 +8,57 @@ DeliveryMenuController::DeliveryMenuController(Database db)
     this->db = db;
 }
 
-void DeliveryMenuController::veljaAfhendingarstad(){
-    vector<string> allAfhendingarstadir = db.getAllAfhendingarstadirOnDatabase();
-    displayAllAfhendingarstadir(allAfhendingarstadir);
-    cout << "Vinsamlegast veldu afhendingarstad." << endl;
-    sign();
-    cin >> afhendingarstadur;
-    pressAnyKeyToContinue();
-}
-
 void DeliveryMenuController::init(){
     char input;
+    string afhendingarstadur;
+    int afhendingarstadurID;
 
     while(input != 'h'){
         clearScreen();
-        displayDeliveryWelcome1();
+        displayDeliveryWelcome1(afhendingarstadur);
         displayDeliveryNavigation1();
 
         sign();
         cin >> input;
 
         if(input == 'a'){
-            veljaAfhendingarstad();
+            int val;
+            cout << "Veldu afhendingarstad: "<< endl;
+            //setja í fall
+            vector<string> allafhendingarstadir = db.getAllAfhendingarstadirOnDatabase();
+            displayAllAfhendingarstadir(allafhendingarstadir);
+            sign();
+            cin >> val;
+            afhendingarstadur = db.getAfhendingarstadurByID(val);
+            afhendingarstadurID = val;
         }
-
+        /*
         else if(input == 'p'){
-            cout << "Her er listi med ollum pontudum pizzum: " << endl;
-            //Fá upp pantanir á afhendingarstað listi frá sölumanni
+
+            vector<Pantanir> pantaniraafhendingastad = db.getAllPantanirByLocationID(afhendingarstadurID);
+            displayAllPantanir(pantaniraafhendingastad);
+
+        }
+        */
+        else if(input == 'b') {
+            //fá lista af pizzum
+            displayAfhendingPizzas(db.getAllUnbakedPizzasOnLocation(afhendingarstadur));
             pressAnyKeyToContinue();
         }
 
-        else if(input == 'b') {
-            //fá upp lista af tilbúnum pöntunum frá bakara
-            cout << "Hvada pizzu aetlar thu ad afhenda: " << endl;
-            int pizzatilafhendingar;
+        else if (input == 'm')
+        {
+            int val1;
+            string val2;
+            cout << "Vinsamlegast skrifadu inn ID a pizzuni." << endl;
             sign();
-            cin >> pizzatilafhendingar;
-            // þessi pizza eyðist af listanum
-        }
+            cin >> val1;
+            displaySpecificUnbakedPizzaByID(db.getAllUnbakedPizzasOnLocation(afhendingarstadur), val1);
 
-
-        else if (input == 'm') {
-            int val;
-            do{
-                cout << "Veldu 1 ef pizzan hefur verid greidd" << endl;
-                cout  << "Veldu 2 ef pizzan hefur verid afhent" << endl;
-                sign();
-                cin >> val;
-
-                if (val == 1){
-                    cout << "Pizzan hefur verid greidd og er nu tilbuin til afhendingar!" << endl;
-                }
-                if (val == 2){
-                    cout << "Pizzan hefur verid afhent!" << endl;
-                }
-                else {
-                    cout << "Rangt inntak!" << endl;
-                }
-            }while(val != 1 && val != 2);
+            displayAfhendaPizzaOptions();
+            sign();
+            cin >> val2;
+            db.setUnbakedPizzaStatusByID(afhendingarstadurID,val1,val2);
         }
 
         else if(input == 't'){

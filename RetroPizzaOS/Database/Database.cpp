@@ -186,6 +186,12 @@ void Database::addOrderToSpecificPlace(vector<Pizza> pizzas, vector<Medlaeti> me
     //greitt eða ekki
     myfile << "\n" << greitt;
 
+    //hversu margar pizzur
+    myfile << "\n" << pizzas.size();
+
+    //hversu morg medlaeti
+    myfile << "\n" << medlatis.size();
+
     //delimiter
     myfile << "\n" << ":";
 
@@ -201,6 +207,23 @@ void Database::addOrderToSpecificPlace(vector<Pizza> pizzas, vector<Medlaeti> me
     myfile << "\n1";
     myfile.close();
 }
+
+/*
+vector<Pantanir> Database::getAllPantanirByLocationID(int location)
+{
+    string afhendingarstadur = getAfhendingarstadurByID(location);
+    afhendingarstadur = afhendingarstadur + ".txt";
+    Pantanir pontun;
+    vector<Pantanir> myList;
+    string line;
+
+    ifstream myfile(afhendingarstadur.c_str());
+
+    if (myfile.is_open()){
+
+    }
+}
+*/
 
 vector<Pontudpizza> Database::getAllUnbakedPizzasOnLocation(string location)
 {

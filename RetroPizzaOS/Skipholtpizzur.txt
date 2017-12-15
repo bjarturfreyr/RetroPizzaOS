@@ -8,13 +8,4 @@ Ysa Salami Sveppir
 custom
 1100
 Lax 
-Braudstangir
-700
-Sprite
-200
-Sótt
-athugasemd
-0
-3
-2
-:
+1

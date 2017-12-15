@@ -4,7 +4,7 @@ Pontudpizza::Pontudpizza(){
     this->nafn = "";
     this->verd = 0;
     this->alegg = alegg;
-    this->status = "1"; //1 = unbaked, 2 = in oven, 3 = ready
+    this->status = "1"; //1 = unbaked, 2 = in oven, 3 = ready, 4 = greidd, 5 = afhent
 }
 
 Pontudpizza::Pontudpizza(string nafn, int verd, vector<string> alegg, string status){

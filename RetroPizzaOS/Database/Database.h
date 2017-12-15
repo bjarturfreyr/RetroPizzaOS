@@ -13,6 +13,7 @@
 #include "Medlaeti.h"
 #include <conio.h>
 #include "Pontudpizza.h"
+#include "Pantanir.h"
 
 using namespace std;
 
@@ -26,6 +27,7 @@ class Database {
     vector<Medlaeti> getAllMedlaetiOnDatabase();
     void getaleggformypizza(int myChoice);
     vector<Pontudpizza> getAllUnbakedPizzasOnLocation(string location);
+    vector<Pantanir> getAllPantanirByLocationID(int location);
 
 
     string getPizzaSizeByID(int id);

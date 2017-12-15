@@ -70,11 +70,15 @@ void BakersMenuView::displayUnbakedPizzas(vector<Pontudpizza> listOfPizzas)
 void BakersMenuView::displaySpecificUnbakedPizzaByID(vector<Pontudpizza> listOfPizzas, int id)
 {
     id -= 1;
-    for(int i = 0; i == id; i++)
+    for(int i = 0; i < listOfPizzas.size(); i++)
     {
-        cout << listOfPizzas[i].getNafn() << endl;
-        for(int j = 0; j < listOfPizzas[i].getAlegg().size(); j++) {
-            cout << listOfPizzas[i].getAlegg()[j] << endl;
+        if (i == id) {
+            cout << "Nafn: " << endl;
+            cout << listOfPizzas[i].getNafn() << endl << endl;
+            cout << "Alegg: " << endl;
+            for(int j = 0; j < listOfPizzas[i].getAlegg().size(); j++) {
+                cout << listOfPizzas[i].getAlegg()[j] << endl;
+            }
         }
     }
 }
