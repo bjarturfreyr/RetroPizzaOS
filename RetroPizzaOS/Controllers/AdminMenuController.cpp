@@ -174,6 +174,3 @@ void AdminMenuController::addaleggtomenu(int toppingcount){
         cout << listmyalegg[i] << " ";
     }
 }
-
-
-

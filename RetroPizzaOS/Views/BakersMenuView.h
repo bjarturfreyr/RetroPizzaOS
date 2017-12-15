@@ -4,35 +4,17 @@
 #include <iostream>
 #include "Database.h"
 #include "GlobalHelpers.h"
+#include "Pizza.h"
+#include "Alegg.h"
 
 using namespace std;
 using namespace GlobalHelpers;
 
 namespace BakersMenuView{
     void displayBakersNavigation();
-    void displayBakersWelcome();
-    /*
-    void displayBakersMenu();
-    void displayBakersEnding();
-    void displayAfhendingarstadir();
-    void selectPizza(int numerpizzu);
-
-    void bakersGetPizza();
-
-    void villuskilabod();
-
-    void ofnMenu();
-    void ofnReddy();
-    void ofnNuna();
-
-    void pokkunMenu();
-    void pokkunReddy();
-    void pokkunNuna();
-
-    void tilbuinMenu();
-    void tilbuinReddy();
-    void tilbuinNuna();
-    */
+    void displayBakersWelcome(string afhendingarstadur);
+    void displayUnbakedPizzas(vector<Pizza> listOfPizzas);
+    void displaySpecificUnbakedPizzaByID(vector<Pizza> listOfPizzas, int id);
 };
 
 #endif // BAKERSMENUVIEW_H

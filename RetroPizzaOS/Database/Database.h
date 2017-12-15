@@ -24,6 +24,7 @@ class Database {
     vector<string> getAllToppingsOnDatabase();
     vector<Medlaeti> getAllMedlaetiOnDatabase();
     void getaleggformypizza(int myChoice);
+    vector<Pizza> getAllUnbakedPizzasOnLocation(string location);
 
 
     string getPizzaSizeByID(int id);

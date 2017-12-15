@@ -34,17 +34,17 @@ void DeliveryMenuController::init(){
 
         else if(input == 'p'){
             cout << "Her er listi med ollum pontudum pizzum: " << endl;
-            ///Fá upp pantanir á afhendingarstað listi frá sölumanni
+            //Fá upp pantanir á afhendingarstað listi frá sölumanni
             pressAnyKeyToContinue();
         }
 
         else if(input == 'b') {
-            ///fá upp lista af tilbúnum pöntunum frá bakara
+            //fá upp lista af tilbúnum pöntunum frá bakara
             cout << "Hvada pizzu aetlar thu ad afhenda: " << endl;
             int pizzatilafhendingar;
             sign();
             cin >> pizzatilafhendingar;
-            /// þessi pizza eyðist af listanum
+            // þessi pizza eyðist af listanum
         }
 
 

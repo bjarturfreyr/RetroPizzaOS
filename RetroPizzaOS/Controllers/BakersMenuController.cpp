@@ -7,13 +7,13 @@ BakersMenuController::BakersMenuController(Database db)
 
 void BakersMenuController::init()
 {
-    int afhendingarstadur = 0;
+    string afhendingarstadur;
     char input;
 
     while(input != 'h')
     {
         clearScreen();
-        displayBakersWelcome();
+        displayBakersWelcome(afhendingarstadur);
         displayBakersNavigation();
 
         sign();
@@ -21,22 +21,29 @@ void BakersMenuController::init()
 
         if(input == 'a')
         {
-            cout << "Veldu stadsetningu: "<< endl;
+            int val;
+            cout << "Veldu afhendingarstad: "<< endl;
             //setja í fall
             vector<string> allafhendingarstadir = db.getAllAfhendingarstadirOnDatabase();
             displayAllAfhendingarstadir(allafhendingarstadir);
-            cout << "Afhendingarstadur: ";
-            cin >> afhendingarstadur;
+            sign();
+            cin >> val;
+            afhendingarstadur = db.getAfhendingarstadurByID(val);
         }
 
         else if (input == 'b')
         {
-            // fa aftur upp lista af öllum pontudum pizzum
-            int pizzatobake;
-            cout << "Hvada pizzu aetlar thu ad baka: ";
-            sign();
-            cin >> pizzatobake;
-            ///hér er búið að velja eina pizzu af listanum og hann faer tha pizzu upp og bakar hana(ath þessi pizza þarf ad eydast af listanum
+            displayUnbakedPizzas(db.getAllUnbakedPizzasOnLocation(afhendingarstadur));
+            pressAnyKeyToContinue();
+        }
+
+        else if (input == 's')
+        {
+            int id;
+            cout << "Vinsamlegast skrifadu inn ID a pizzuni." << endl;
+            cin >> id;
+            displaySpecificUnbakedPizzaByID(db.getAllUnbakedPizzasOnLocation(afhendingarstadur), id);
+            pressAnyKeyToContinue();
         }
 
         else if (input == 'n')
@@ -53,7 +60,7 @@ void BakersMenuController::init()
                 if(val == 2){
                     cout << "Pizzan er nu tilbuin!" << endl;
                 }
-                ///tilbúnar pizzur þurfa að fara í textaskrá
+                //tilbúnar pizzur þurfa að fara í textaskrá
                 else{
                     cout << "Rangt inntak!" << endl;
                 }
@@ -71,74 +78,4 @@ void BakersMenuController::init()
         }
     }
     exit(0);
-
-    //GAMALL KOÐI
-    /*
-    char inntak;
-    char afhendingarstadur;
-    int numerpizzu;
-
-    displayBakersMenu();
-
-    cin >> afhendingarstadur;
-    displayBakersNavigation(afhendingarstadur);
-
-    bakersGetPizza();
-    cin >> numerpizzu;
-
-    do{
-        ofnMenu();
-
-        cin >>inntak;
-        if (inntak == 'y' || inntak == 'Y'){
-            ofnReddy();
-        }
-        else if(inntak == 'n' || inntak =='N'){
-            do{
-                ofnNuna();
-                cin >> inntak;
-            }while(inntak == 'n' || inntak == 'N');
-        }
-        else{
-            villuskilabod();
-        }
-    }while(inntak != 'n' && inntak != 'N' && inntak != 'y' && inntak != 'Y');
-
-
-    do{
-        pokkunMenu();
-        cin >> inntak;
-            if (inntak == 'y' || inntak == 'Y'){
-            pokkunReddy();
-        }
-        else if(inntak == 'n' || inntak =='N'){
-            do{
-                pokkunNuna();
-                cin >> inntak;
-            }while(inntak == 'n' || inntak == 'N');
-        }
-        else{
-            villuskilabod();
-        }
-    }while(inntak != 'n' && inntak != 'N' && inntak != 'y' && inntak != 'Y');
-
-    do{
-        tilbuinMenu();
-        cin >> inntak;
-            if (inntak == 'y' || inntak == 'Y'){
-            tilbuinReddy();
-        }
-        else if(inntak == 'n' || inntak =='N'){
-            do{
-                tilbuinNuna();
-                cin >> inntak;
-            }while(inntak == 'n' || inntak == 'N');
-        }
-        else{
-            villuskilabod();
-        }
-    }while(inntak != 'n' && inntak != 'N' && inntak != 'y' && inntak != 'Y');
-
-    displayBakersEnding();
-    */
 }

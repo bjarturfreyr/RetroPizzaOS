@@ -152,6 +152,57 @@ void Database::addOrderToSpecificPlace(vector<Pizza> pizzas, vector<Medlaeti> me
     myfile << "\n" << ":";
 
     myfile.close();
+
+    //setja inn obakadar pizzur
+    storelocation = getAfhendingarstadurByID(afhendingarstadurinn) + "pizzur.txt";
+    myfile.open(storelocation.c_str(),ios::app);
+    for(int i = 0; i < pizzas.size(); i++)
+    {
+        myfile << pizzas[i];
+    }
+    myfile.close();
+}
+
+vector<Pizza> Database::getAllUnbakedPizzasOnLocation(string location)
+{
+    location = location + "pizzur.txt";
+    Pizza pizza;
+    vector<Pizza> myList;
+    string line;
+
+    string pizzaname;
+    int pizzaprice;
+
+    ifstream myfile (location.c_str());
+
+    if (myfile.is_open()){
+    int i = 0;
+        while(getline(myfile, line)){
+            if (i == 0) {
+                pizza.setName(line);
+            }
+
+            else if (i == 1) {
+                pizzaprice = atoi(line.c_str());
+                pizza.setVerd(pizzaprice);
+            }
+
+            else if (i == 2) {
+                //https://stackoverflow.com/questions/5607589/right-way-to-split-an-stdstring-into-a-vectorstring
+                stringstream ss(line);
+                istream_iterator<string> begin(ss);
+                istream_iterator<string> end;
+                vector<string> myalegg(begin, end);
+                pizza.setAlegg(myalegg);
+
+                myList.push_back(pizza);
+                i = -1;
+            }
+            i++;
+        }
+    }
+    myfile.close();
+    return myList;
 }
 
 vector<string> Database::getAllPizzaSizesOnDatabase()
@@ -177,31 +228,6 @@ vector<string> Database::getAllPizzaSizesOnDatabase()
 
     return myList;
 }
-
-/*
-string Database::getPizzaSizeByID(int id) {
-    string mySize;
-    string line;
-    ifstream myfile ("staerdir.txt");
-    if (myfile.is_open())
-    {
-        int num2 = 0;
-        for (int i = 0; i < mySize; i++) {
-            num2 += 2;
-        }
-        for (int i = 0; i <= num2; i++) {
-            getline (myfile,line);
-            if (i == num2) {
-                mySize = getline(myfile, line);
-            }
-        }
-
-        myfile.close();
-    }
-
-    return mySize;
-}
-*/
 
 vector<string> Database::getAllToppingsOnDatabase()
 {

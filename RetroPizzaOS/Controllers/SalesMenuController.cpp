@@ -13,6 +13,7 @@ void SalesMenuController::init()
     string athugasemdapontun;
     int afhendingarstadurapontun;
     bool sentapontun;
+    bool borgadapontun;
 
     while(selection != 'h'){
         clearScreen();
@@ -76,7 +77,8 @@ void SalesMenuController::init()
             sentapontun = homeorget();
             afhendingarstadurapontun = veljaAfhendingarstad();
             athugasemdapontun = addAthugasemd();
-            db.addOrderToSpecificPlace(pizzuripontun,medlaetiipontun,athugasemdapontun,afhendingarstadurapontun,sentapontun,false);
+            borgadapontun = borganunaedaastadnum();
+            db.addOrderToSpecificPlace(pizzuripontun,medlaetiipontun,athugasemdapontun,afhendingarstadurapontun,sentapontun,borgadapontun);
         }
 
         else if (selection == 't') {
@@ -120,6 +122,29 @@ bool SalesMenuController::homeorget(){
     }
 
     return sent;
+}
+
+bool SalesMenuController::borganunaedaastadnum()
+{
+    bool borganuna;
+    int inntak;
+    cout << "Veldu '1' til ad borga a stadnum." << endl;
+    cout << "Veldu '2' til ad borga nuna." << endl;
+
+    sign();
+    cin >> inntak;
+
+    if(inntak == 1){
+        cout << "Thu valdir ad borga a stadnum." << endl;
+        borganuna = false;
+    }
+
+    else{
+        cout << "Thu valdir ad borga nuna." << endl;
+        borganuna = true;
+    }
+
+    return borganuna;
 }
 
 string SalesMenuController::addAthugasemd()

@@ -23,6 +23,7 @@ class SalesMenuController
         void displayAllAfhendingarstadir(vector<string>listOfAfhendingarstadir);
         int veljaAfhendingarstad();
         string addAthugasemd();
+        bool borganunaedaastadnum();
         //void openMenu();
         //void displayAllPizzasOnMenu(vector<Pizza>listOfPizzasOnMenu);
     private:

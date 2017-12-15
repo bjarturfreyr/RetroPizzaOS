@@ -17,6 +17,7 @@ class BakersMenuController
 
     private:
         void init();
+        void faupplistaafpontudumpizzum(string location);
         Database db;
 };
 
