@@ -28,7 +28,6 @@ class Pizza
     private:
         string nafn;
         int verd;
-        int aleggsFjoldi;
         vector<string> alegg;
 };
 

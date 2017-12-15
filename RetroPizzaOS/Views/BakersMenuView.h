@@ -6,6 +6,7 @@
 #include "GlobalHelpers.h"
 #include "Pizza.h"
 #include "Alegg.h"
+#include "Pontudpizza.h"
 
 using namespace std;
 using namespace GlobalHelpers;
@@ -13,8 +14,9 @@ using namespace GlobalHelpers;
 namespace BakersMenuView{
     void displayBakersNavigation();
     void displayBakersWelcome(string afhendingarstadur);
-    void displayUnbakedPizzas(vector<Pizza> listOfPizzas);
-    void displaySpecificUnbakedPizzaByID(vector<Pizza> listOfPizzas, int id);
+    void displayUnbakedPizzas(vector<Pontudpizza> listOfPizzas);
+    void displaySpecificUnbakedPizzaByID(vector<Pontudpizza> listOfPizzas, int id);
+    void displayBakePizzaOptions();
 };
 
 #endif // BAKERSMENUVIEW_H

@@ -12,6 +12,7 @@
 #include <iterator>
 #include "Medlaeti.h"
 #include <conio.h>
+#include "Pontudpizza.h"
 
 using namespace std;
 
@@ -24,7 +25,7 @@ class Database {
     vector<string> getAllToppingsOnDatabase();
     vector<Medlaeti> getAllMedlaetiOnDatabase();
     void getaleggformypizza(int myChoice);
-    vector<Pizza> getAllUnbakedPizzasOnLocation(string location);
+    vector<Pontudpizza> getAllUnbakedPizzasOnLocation(string location);
 
 
     string getPizzaSizeByID(int id);
@@ -36,6 +37,7 @@ class Database {
     vector<string> displayToppingList();
 
 
+    void setUnbakedPizzaStatusByID(int afhendingarstadur, int id, string setstatus);
     void addPizzaToMenu(const Pizza& pizza);
     void addPizzaToUnbakedListInStoreLocation(Pizza pizza, string storeLocation);
     void addSize(string);

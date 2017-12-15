@@ -1,9 +1,15 @@
-Hunakonungurinn
-2600
-Ysa Salami Sveppir 
-Coca-Cola
-200
+
+Einn
+650
+Pepperoni Sardinur Lax 
+Sent
+blarg
+0
+:
+Svepperoni
+1200
+Pepperoni Sveppir 
 Sótt
-Athugasemd
+no
 0
 :

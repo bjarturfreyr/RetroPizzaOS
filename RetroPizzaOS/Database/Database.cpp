@@ -103,6 +103,7 @@ void Database::addSize(string staerd) {
     myfile.close();
 }
 
+/*
 void Database::addPizzaToUnbakedListInStoreLocation(Pizza pizza, string storeLocation)
 {
     ofstream fout;
@@ -113,6 +114,43 @@ void Database::addPizzaToUnbakedListInStoreLocation(Pizza pizza, string storeLoc
         fout << pizza;
         fout.close();
     }
+}
+*/
+
+void Database::setUnbakedPizzaStatusByID(int afhendingarstadur, int id, string setstatus)
+{
+    string storelocation = getAfhendingarstadurByID(afhendingarstadur) + "pizzur.txt";
+    string line;
+
+    //Lesa allt skjalið í vektor
+    ifstream myfile;
+    myfile.open(storelocation.c_str());
+    vector<string> allfilecontents;
+    int i = 1;
+    while(getline(myfile, line))
+    {
+        //breyta status á pizzu númer "id", status er alltaf í fjórðu línu.
+        if (i == id*4) {
+            line = setstatus;
+        }
+
+        allfilecontents.push_back(line);
+        i++;
+    }
+    myfile.close();
+
+    //skrifa nýjann file sem temp með nýjum status
+    ofstream temp;
+    temp.open("temp.txt");
+    for(int i = 0; i < allfilecontents.size(); i++)
+    {
+        temp << allfilecontents[i] << "\n";
+    }
+    temp.close();
+
+    //Delete gamla file og rename temp.
+    remove(storelocation.c_str());
+    rename("temp.txt", storelocation.c_str());
 }
 
 void Database::addOrderToSpecificPlace(vector<Pizza> pizzas, vector<Medlaeti> medlatis, string athugasemd, int afhendingarstadurinn, bool sent, bool greitt)
@@ -160,14 +198,15 @@ void Database::addOrderToSpecificPlace(vector<Pizza> pizzas, vector<Medlaeti> me
     {
         myfile << pizzas[i];
     }
+    myfile << "\n1";
     myfile.close();
 }
 
-vector<Pizza> Database::getAllUnbakedPizzasOnLocation(string location)
+vector<Pontudpizza> Database::getAllUnbakedPizzasOnLocation(string location)
 {
     location = location + "pizzur.txt";
-    Pizza pizza;
-    vector<Pizza> myList;
+    Pontudpizza pizza;
+    vector<Pontudpizza> myList;
     string line;
 
     string pizzaname;
@@ -194,7 +233,10 @@ vector<Pizza> Database::getAllUnbakedPizzasOnLocation(string location)
                 istream_iterator<string> end;
                 vector<string> myalegg(begin, end);
                 pizza.setAlegg(myalegg);
+            }
 
+            else if (i == 3) {
+                pizza.setStatus(line);
                 myList.push_back(pizza);
                 i = -1;
             }

@@ -8,6 +8,7 @@ BakersMenuController::BakersMenuController(Database db)
 void BakersMenuController::init()
 {
     string afhendingarstadur;
+    int afhendingarstadurID;
     char input;
 
     while(input != 'h')
@@ -29,6 +30,7 @@ void BakersMenuController::init()
             sign();
             cin >> val;
             afhendingarstadur = db.getAfhendingarstadurByID(val);
+            afhendingarstadurID = val;
         }
 
         else if (input == 'b')
@@ -41,6 +43,7 @@ void BakersMenuController::init()
         {
             int id;
             cout << "Vinsamlegast skrifadu inn ID a pizzuni." << endl;
+            sign();
             cin >> id;
             displaySpecificUnbakedPizzaByID(db.getAllUnbakedPizzasOnLocation(afhendingarstadur), id);
             pressAnyKeyToContinue();
@@ -48,23 +51,17 @@ void BakersMenuController::init()
 
         else if (input == 'n')
         {
-            int val;
-            do{
-                cout << "Smelltu á 1 thegar pizzan er i vinnslu, smelltu a 2 thegar pizzan er tilbuin." << endl;
-                sign();
-                cin >> val;
-                if(val == 1){
-                    cout << "Pizzan er nu i vinnslu!" << endl;
+            int val1;
+            string val2;
+            cout << "Vinsamlegast skrifadu inn ID a pizzuni." << endl;
+            sign();
+            cin >> val1;
+            displaySpecificUnbakedPizzaByID(db.getAllUnbakedPizzasOnLocation(afhendingarstadur), val1);
 
-                }
-                if(val == 2){
-                    cout << "Pizzan er nu tilbuin!" << endl;
-                }
-                //tilbúnar pizzur þurfa að fara í textaskrá
-                else{
-                    cout << "Rangt inntak!" << endl;
-                }
-            }while(val != 1 && val != 2);
+            displayBakePizzaOptions();
+            sign();
+            cin >> val2;
+            db.setUnbakedPizzaStatusByID(afhendingarstadurID,val1,val2);
         }
 
         else if(input == 't')

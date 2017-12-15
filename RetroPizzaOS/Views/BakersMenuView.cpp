@@ -55,7 +55,7 @@ void BakersMenuView::displayBakersNavigation(){
     cout << "' til ad haetta." << endl;
 }
 
-void BakersMenuView::displayUnbakedPizzas(vector<Pizza> listOfPizzas)
+void BakersMenuView::displayUnbakedPizzas(vector<Pontudpizza> listOfPizzas)
 {
     for(int i = 0; i < listOfPizzas.size(); i++){
         cout << "------------------" << endl;
@@ -67,7 +67,7 @@ void BakersMenuView::displayUnbakedPizzas(vector<Pizza> listOfPizzas)
     cout << "------------------" << endl;
 }
 
-void BakersMenuView::displaySpecificUnbakedPizzaByID(vector<Pizza> listOfPizzas, int id)
+void BakersMenuView::displaySpecificUnbakedPizzaByID(vector<Pontudpizza> listOfPizzas, int id)
 {
     id -= 1;
     for(int i = 0; i == id; i++)
@@ -77,4 +77,25 @@ void BakersMenuView::displaySpecificUnbakedPizzaByID(vector<Pizza> listOfPizzas,
             cout << listOfPizzas[i].getAlegg()[j] << endl;
         }
     }
+}
+
+void BakersMenuView::displayBakePizzaOptions()
+{
+    cout << "Veldu '";
+    setColor(8);
+    cout << "1";
+    setColor(15);
+    cout << "' til ad merkja pizzu obakada." << endl;
+
+    cout << "Veldu '";
+    setColor(9);
+    cout << "2";
+    setColor(15);
+    cout << "' til ad merkja pizzu i vinnslu." << endl;
+
+    cout << "Veldu '";
+    setColor(10);
+    cout << "3";
+    setColor(15);
+    cout << "' til ad merkja pizzu tilbuna." << endl;
 }

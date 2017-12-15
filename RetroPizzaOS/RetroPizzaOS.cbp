@@ -50,8 +50,6 @@
 		<Unit filename="Controllers/AdminMenuController.h" />
 		<Unit filename="Controllers/BakersMenuController.cpp" />
 		<Unit filename="Controllers/BakersMenuController.h" />
-		<Unit filename="Controllers/DeliveryController.cpp" />
-		<Unit filename="Controllers/DeliveryController.h" />
 		<Unit filename="Controllers/DeliveryMenuController.cpp" />
 		<Unit filename="Controllers/DeliveryMenuController.h" />
 		<Unit filename="Controllers/MainMenuController.cpp" />
@@ -62,7 +60,6 @@
 		<Unit filename="Database/Database.h" />
 		<Unit filename="Helpers/GlobalHelpers.cpp" />
 		<Unit filename="Helpers/GlobalHelpers.h" />
-		<Unit filename="Models/Afhendingastadir.h" />
 		<Unit filename="Models/Alegg.cpp" />
 		<Unit filename="Models/Alegg.h" />
 		<Unit filename="Models/Medlaeti.cpp" />
@@ -71,6 +68,8 @@
 		<Unit filename="Models/Pantanir.h" />
 		<Unit filename="Models/Pizza.cpp" />
 		<Unit filename="Models/Pizza.h" />
+		<Unit filename="Models/Pontudpizza.cpp" />
+		<Unit filename="Models/Pontudpizza.h" />
 		<Unit filename="Views/AdminMenuView.cpp" />
 		<Unit filename="Views/AdminMenuView.h" />
 		<Unit filename="Views/BakersMenuView.cpp" />
