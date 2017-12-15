@@ -8,3 +8,5 @@ Fanta
 200
 Sprite
 200
+sukkuladigott
+500
